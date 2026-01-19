@@ -168,12 +168,16 @@ section {
 
 .about {
   background: var(--stone);
+  position: relative;
+  overflow: hidden;
 }
 
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .about-story p {
@@ -192,6 +196,117 @@ section {
   background: var(--fog);
   border: 1px solid rgba(17, 17, 17, 0.08);
   font-size: 0.9rem;
+}
+
+/* one image at a time slideshow (aligned clean split) */
+.about-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.about-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(60px);
+  z-index: 0;
+}
+
+.about-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* FIX: clean 50/50 split so it aligns visually with the layout */
+.about-bg.left {
+  left: 0;
+  width: 50%;
+  filter: blur(18px);
+  opacity: 0.16;
+  background-position: left center;
+}
+
+.about-bg.right {
+  right: 0;
+  width: 50%;
+  filter: blur(0px);
+  opacity: 0.30;
+  background-position: right center;
+}
+
+/* timing: 20s total, 10s per image (enter -> hold -> exit) */
+.slide-1 {
+  animation: about-slide-1 20s ease-in-out infinite;
+}
+
+.slide-2 {
+  animation: about-slide-2 20s ease-in-out infinite;
+}
+
+@keyframes about-slide-1 {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  6% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  44% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes about-slide-2 {
+  0%,
+  50% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  56% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  94% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-slide {
+    animation: none;
+    transform: none;
+  }
+
+  .slide-1 {
+    opacity: 1;
+  }
+
+  .slide-2 {
+    display: none;
+  }
 }
 
 .timeline {

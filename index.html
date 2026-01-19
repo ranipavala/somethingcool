@@ -11,6 +11,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+      <style>
+      @keyframes page-enter {
+        0% {
+          opacity: 0;
+          transform: translateY(12px);
+          filter: blur(8px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+
+      body {
+        animation: page-enter 0.6s ease-out both;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -30,7 +48,7 @@
           <p class="hero-eyebrow">Portfolio 2026</p>
           <h1>
             Hi, I’m <span>Pavala</span>.<br />
-            Your typical CS student.<br/> (I guess)
+            Your typical CS student.<br/> (Maybe not)
           </h1>
           <p class="hero-subtitle">
             A 22-year-old with a genuine curiosity for learning, exploring, and connecting.
@@ -41,31 +59,46 @@
           </div>
         </div>
         <div class="hero-image">
-          <img class="hero-photo" src="landingpage_pic.jpg" alt="Portrait of Pavala" />
+          <img class="hero-photo" src="images/landingpage_pic.jpg" alt="Portrait of Pavala" />
         </div>
       </section>
 
       <section class="about" id="about">
+        <!-- one image at a time; left blurry, right clear; auto swipe between two images -->
+        <div class="about-background" aria-hidden="true">
+          <div class="about-slide slide-1">
+            <span class="about-bg left" style="background-image: url('images/aboutpic1.jpg');"></span>
+            <span class="about-bg right" style="background-image: url('images/aboutpic1.jpg');"></span>
+          </div>
+
+          <div class="about-slide slide-2">
+            <span class="about-bg left" style="background-image: url('images/aboutpic2.jpg');"></span>
+            <span class="about-bg right" style="background-image: url('images/aboutpic2.jpg');"></span>
+          </div>
+        </div>
+
         <div class="section-header">
           <h2>About Me</h2>
           <p>Human, curious, and focused on thoughtful digital craft.</p>
         </div>
         <div class="about-grid">
           <div class="about-story">
-            <p><strong>Where I’m from:</strong> [City, Country]</p>
-            <p><strong>What excites me:</strong> [Curiosity about people + systems]</p>
             <p>
-              <strong>Problems I enjoy solving:</strong> [Designing flows that feel
-              effortless and intentional]
+              I’m from Muar, Johor, and a Yayasan Khazanah Watan Scholar who’s naturally curious 
+              about the world around me. I love travelling, hiking, and exploring new places, 
+              whether that’s a quiet trail, a new city, or something I’ve never tried before. 
+              When I’m slowing down, I’m usually listening to music or getting absorbed in a movie.
+               I’m an empath at heart and a huge animal lover too, which is why I often carry dog 
+               and cat food with me—just in case I run into a stray who could use a little care.
             </p>
           </div>
           <div class="about-tags">
-            <span>Product thinking</span>
-            <span>Storytelling</span>
-            <span>Minimal interfaces</span>
-            <span>Collaboration</span>
-            <span>Photography</span>
-            <span>Travel</span>
+            <span>Human-centered</span>
+            <span>Detail-oriented</span>
+            <span>Curious learner</span>
+            <span>Calm communicator</span>
+            <span>Design + code</span>
+            <span>Growth mindset</span>
           </div>
         </div>
       </section>
