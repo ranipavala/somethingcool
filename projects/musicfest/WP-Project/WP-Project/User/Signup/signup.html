@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Music Festival</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Copperplate', fantasy;
+            overflow-y: auto;
+        }
+
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100vw;
+            min-height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 520px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px 55px;
+            border-radius: 30px;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(14px);
+            z-index: 1;
+            margin: 100px auto;
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { transform: translateY(40px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+        }
+
+        form label {
+            display: block;
+            text-align: center;
+            margin: 18px 0 8px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #fff;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8); /* makes input box more readable */
+            color: #000;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #444;
+            opacity: 1;
+        }
+
+        input:focus {
+            outline: none;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff80ff;
+            background-color: rgba(255, 255, 255, 1); /* Fully visible while focused */
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 12px 24px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            width: 48%;
+            transition: 0.3s ease;
+            background-color: #9b59b6;  /* purple tone */
+            color: #fff;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #f4d03f;  /* yellow tone */
+            color: #000;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 12px #ffffff;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .footer{
+            font-family: 'Times New Roman', Times, serif;
+            display: block;
+            text-align: center;
+            margin: 18px 0 8px;
+            font-size: 18px;
+            font-weight: normal;
+            color: #fff;
+        }
+        a.text-decoration-none {
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            color: #f4d03f; /* Optional: Yellow */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a.text-decoration-none:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px #f4d03f;
+        }
+
+    </style>
+</head>
+<body>
+        <img src="signupbg.svg" type="signupbg/svg" id="bgVideo">
+    <div class="container">
+        <h2>User Sign Up</h2>
+        <form method="post" action="signup.php">
+            <label>Full Name</label>
+            <input type="text" name="fullname" placeholder="Enter your full name" required>
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Choose a username" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <label>Contact Number</label>
+            <input type="text" name="contact" placeholder="Phone number" required>
+            <label>IC/Passport No</label>
+            <input type="text" name="ic" placeholder="Identification number" required>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create a password" required>
+            <label>Confirm Password</label>
+            <input type="password" name="confirm_password" placeholder="Repeat your password" required>
+            <div class="btn-container">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Register">
+            </div>
+            <div class="footer">Already have an account?
+                <a href="/WP-Project/User/Login/login.html" class="text-decoration-none">Login here</a>
+            </footer>
+        </form>
+    </div>
+</body>
+</html>

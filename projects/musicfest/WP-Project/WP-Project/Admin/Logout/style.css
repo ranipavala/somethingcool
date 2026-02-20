@@ -1,0 +1,250 @@
+/*Add google font*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Orbitron:wght@400..900&family=Staatliches&display=swap');
+
+/*HI STYLE*/
+.text-hi{
+    color:#9225bd;
+    font-family: "Staatliches", cursive;
+    font-size: 24px;
+    letter-spacing: 0.7px;
+    font-weight: 300;
+}
+
+.text-user{
+    color:#9a50b7;
+    font-family: "Merienda", cursive;
+    font-size: 16px;
+}
+
+/*LOGOUT STYLE*/
+.logout-section {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('signupbg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    position: relative;
+}
+
+.logout-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 70, 70, 0.6);
+    z-index: 0;
+}
+
+.logout-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.logout-message {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logout-btn-g {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e74d3c90;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logout-btn-g:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*Alpine.js STYLE*/
+[x-cloak] {
+    display: none;
+}
+
+/*SIDEBAR STYLE*/
+/* Container for the sidebar and main content */
+.relative.flex {
+    display: flex;
+    min-height: 100vh; /* Ensure full height of the viewport */
+}
+
+/* Sidebar styling */
+.sidebar-container {
+    position: sticky;
+    top: 0; /* Sticks the sidebar at the top */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enables scrolling inside the sidebar if content overflows */
+    width: 256px; /* You can adjust the width as needed */
+    background-color: #fff; /* Optional: Add a background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow to the sidebar */
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Takes up the remaining space */
+    overflow-y: auto; /* Enables scrolling within the main content */
+    padding: 20px; /* Add some padding to the content */
+}
+
+
+/*ZONE CARD STYLE*/
+.zone-card {
+    transition: all 0.3s ease;
+}
+.zone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/*RECEIPT STYLE*/
+.container-receipt {
+    max-width: 900px;
+    width: 100%;
+}
+
+.heading-receipt {
+    text-align: left;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 25px;
+    color: #2d3748;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.receipt-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.receipt-card h4 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.25px;
+    color: #4a5568;
+    font-family: "Orbitron", sans-serif;
+}
+
+.receipt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.receipt-list li {
+    padding: 14px 12px;
+    border-bottom: 1px solid #edf2f7;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    display: flex;
+    justify-content: space-between;
+    color: #4a5568;
+    font-size: 15px;
+}
+
+.receipt-list li:last-child {
+    justify-content: flex-end;
+    border-bottom: none;
+    font-weight: 200;
+    color: #2d3748;
+    padding-top: 18px;
+    font-size: 18px;
+    font-family: "Anton", sans-serif;
+}
+
+/*USER STYLE*/
+
+
+/* Container for the profile */
+.col-md-8 {
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card body styling */
+.card-body {
+    padding: 20px;
+    background-color: white;
+}
+
+/* Row styling for each section */
+.row {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.col-sm-3 h6 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #464646;
+    font-family: "Lora", serif;
+}
+
+/* Value styling */
+.col-sm-9.text-secondary {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #762d93dc;
+    padding-top: 3px;
+}
+
+/* Add horizontal line */
+hr {
+    border-top: 1px solid #f1f1f1;
+    margin: 15px 0;
+}

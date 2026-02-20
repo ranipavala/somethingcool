@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carbonfootprint · Supporting Documents</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ink: #111111;
+        --stone: #f6f3ee;
+        --sand: #ede7dd;
+        --fog: #fdfbf8;
+        --muted: #6f6a64;
+        --accent: #2f2f2f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        background: var(--stone);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 56px 6vw;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        margin: 0;
+        letter-spacing: -0.02em;
+      }
+
+      .sub {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: var(--fog);
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        color: var(--ink);
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .back:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(17, 17, 17, 0.08);
+      }
+
+      .card {
+        background: var(--fog);
+        border: 1px solid rgba(17, 17, 17, 0.08);
+        border-radius: 24px;
+        padding: 22px;
+      }
+
+      .hint {
+        color: var(--muted);
+        margin: 0 0 14px;
+        font-size: 0.95rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      a.file {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(17, 17, 17, 0.08);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        background: rgba(253, 251, 248, 0.7);
+      }
+
+      a.file:hover {
+        transform: translateY(-1px);
+        border-color: rgba(17, 17, 17, 0.18);
+        box-shadow: 0 12px 26px rgba(17, 17, 17, 0.08);
+      }
+
+      .name {
+        font-weight: 600;
+      }
+
+      .tag {
+        font-size: 0.85rem;
+        color: var(--muted);
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        background: rgba(253, 251, 248, 0.95);
+        padding: 6px 10px;
+        border-radius: 999px;
+        flex: 0 0 auto;
+      }
+
+      footer {
+        margin-top: 16px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <div class="top">
+        <div>
+          <h1>carbonfootprint</h1>
+          <p class="sub">Supporting documents in this folder.</p>
+        </div>
+        <a class="back" href="../../index.html">← Back to portfolio</a>
+      </div>
+
+      <section class="card" aria-label="Files">
+        <p class="hint">Click any file to open it in a new tab.</p>
+
+        <ul>
+          <li>
+            <a class="file" href="./1 - A - Launch.png" target="_blank" rel="noopener">
+              <span class="name">1 - A - Launch.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./1 - B - Launch.png" target="_blank" rel="noopener">
+              <span class="name">1 - B - Launch.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./3.0 - A - Create Account.png" target="_blank" rel="noopener">
+              <span class="name">3.0 - A - Create Account.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./3.0 - A - Login.png" target="_blank" rel="noopener">
+              <span class="name">3.0 - A - Login.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./4 - A - Home.png" target="_blank" rel="noopener">
+              <span class="name">4 - A - Home.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./9.5.0 - A - Profile.png" target="_blank" rel="noopener">
+              <span class="name">9.5.0 - A - Profile.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./HistoryTrips.png" target="_blank" rel="noopener">
+              <span class="name">HistoryTrips.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Leaderboard.png" target="_blank" rel="noopener">
+              <span class="name">Leaderboard.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Missions.png" target="_blank" rel="noopener">
+              <span class="name">Missions.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./of Monthly Target (20 kg).png" target="_blank" rel="noopener">
+              <span class="name">of Monthly Target (20 kg).png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Oval.png" target="_blank" rel="noopener">
+              <span class="name">Oval.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Oval-1.png" target="_blank" rel="noopener">
+              <span class="name">Oval-1.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Smart Activity Tracker.png" target="_blank" rel="noopener">
+              <span class="name">Smart Activity Tracker.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Smart Activity Tracker-1.png" target="_blank" rel="noopener">
+              <span class="name">Smart Activity Tracker-1.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Smart Activity Tracker-2.png" target="_blank" rel="noopener">
+              <span class="name">Smart Activity Tracker-2.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Smart Activity Tracker-3.png" target="_blank" rel="noopener">
+              <span class="name">Smart Activity Tracker-3.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Smart Activity Tracker-4.png" target="_blank" rel="noopener">
+              <span class="name">Smart Activity Tracker-4.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Smart Activity Tracker-5.png" target="_blank" rel="noopener">
+              <span class="name">Smart Activity Tracker-5.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+          <li>
+            <a class="file" href="./Trip Detail View.png" target="_blank" rel="noopener">
+              <span class="name">Trip Detail View.png</span>
+              <span class="tag">PNG</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <footer>Tip: If a filename has spaces, keep it exactly the same in the link (this page already does).</footer>
+    </main>
+  </body>
+</html>

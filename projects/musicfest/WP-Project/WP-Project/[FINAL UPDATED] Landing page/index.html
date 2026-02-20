@@ -1,0 +1,746 @@
+<!--
+Filename: index.html
+Purpose: Main landing page of the music festival website.
+Usage: Displays the homepage with event details, lineup, schedule, and links.
+Key points:
+- Header and navigation menu
+- Hero section with background video
+- Artist showcase section
+- Event schedule
+- Footer with social media links
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Festava Live - Bootstrap 5 CSS Template</title>
+
+    <!--external css files-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">   
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-festava-live.css" rel="stylesheet">
+
+    <style>
+        .modal-header, .modal-footer {
+            background-color: #9b59b6;
+            color: white;
+        }
+        .modal-body button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+
+<!--top header bar-->
+<header class="site-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 d-flex flex-wrap">
+                <p class="d-flex me-4 mb-0">
+                    <i class="bi-person custom-icon me-2"></i>
+                    <strong class="text-dark">Welcome to Purello 2025</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--top navigation bar-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Vibe Divas</a>
+        <button class="btn custom-btn d-lg-none ms-auto me-4" data-bs-toggle="modal" data-bs-target="#roleModal">Buy Ticket</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                <li class="nav-item"><a class="nav-link" href="#section_1">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_2">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_3">Artists</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_4">Tentative</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_5">Buy Tickets NOW</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section_6">Sponsors</a></li>
+            </ul>
+            <button class="btn custom-btn d-lg-block d-none" data-bs-toggle="modal" data-bs-target="#roleModal">Log In</button>
+        </div>
+    </div>
+</nav>
+
+<!--section 1: main poster-->
+            <section class="hero-section" id="section_1">
+                <div class="section-overlay"></div>
+
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="row">
+
+                        <div class="col-12 mt-auto mb-5 text-center">
+                            <small>Vibe Divas Presents</small>
+
+                            <h1 class="text-white mb-5">Purello 2025</h1>
+
+                            <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
+                        </div>
+
+                        <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                            <div class="date-wrap">
+                                <h5 class="text-white">
+                                    <i class="custom-icon bi-clock me-2"></i>
+                                    1<sup>st</sup>, April 2025
+                                </h5>
+                            </div>
+
+                            <div class="location-wrap mx-auto py-3 py-lg-0">
+                                <h5 class="text-white">
+                                    <i class="custom-icon bi-geo-alt me-2"></i>
+                                    Surf Beach @ Sunway Lagoon
+                                </h5>
+                            </div>
+
+                            <div class="social-share">
+                                <ul class="social-icon d-flex align-items-center justify-content-center">
+                                    <span class="text-white me-3">Share:</span>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://m.facebook.com/?lid=16itaCeq0YdWp6seV&srlva=1" class="social-icon-link">
+                                            <span class="bi-facebook"></span>
+                                        </a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://x.com/arrahman/status/1858943507777409526" class="social-icon-link">
+                                            <span class="bi-twitter"></span>
+                                        </a>
+                                    </li>
+
+                                    <li class="social-icon-item">
+                                        <a href="https://www.instagram.com/p/CcEiV-fBfaY/?igsh=MTU0bTV6cjJvMHpieQ==" class="social-icon-link">
+                                            <span class="bi-instagram"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrap">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                        <source src="video/poster.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+<!--section 2: our team info-->
+            <section class="about-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                            <div class="services-info">
+                                <h2 class="text-white mb-4">Meet our Team</h2>
+
+                                <p class="text-white">
+                                    We are <strong>Vibe Divas</strong> — a dynamic team of four passionate individuals brought together by creativity, dedication, and a shared love for music and design. United under the vibrant leadership of <strong>Khirty</strong>, our team consists of <strong>Pavala</strong>, <strong>Chua</strong>, and <strong>Ethar</strong>, each bringing their unique strengths to the stage.
+                                    </p>
+
+                                <h6 class="text-white mt-4">Empowered by Collaboration</h6>
+
+                                <p class="text-white">We believe in the power of teamwork and the magic that happens when ideas flow freely. Every decision we make is a reflection of our shared vision.</p>
+
+                                <h6 class="text-white mt-4">Creating for a Cause</h6>
+
+                                <p class="text-white">From conceptualizing the theme to building this site, we’ve poured our hearts into making this festival experience unforgettable — not just for us, but for every visitor.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="about-text-wrap">
+                                <img src="images/group.jpg" class="about-image img-fluid">
+
+                                <div class="about-text-info d-flex">
+                                    <div class="d-flex">
+                                        <i class="about-text-icon bi-person"></i>
+                                    </div>
+
+
+                                    <div class="ms-4">
+                                        <h3>powered by Vibe Divas</h3>
+
+                                        <p class="mb-0">4 minds. 1 vision. All passion.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+<!--section 3: artist info-->
+            <section class="artists-section section-padding" id="section_3">
+                <div class="container">
+                    <div class="row justify-content-center">
+            
+                        <div class="col-12 text-center">
+                            <h2 class="mb-4">Meet Artists</h2>
+                        </div>
+
+                        <!--artist 1-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/dontoliver.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name       :</strong> Don Toliver</p>
+                                    <p><strong>Birthdate  :</strong> June 12, 1994</p>
+                                    <p><strong>Music      :</strong> Trap, Hip-Hop, R&B</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  : </strong> <a href="https://www.youtube.com/@dontolivermusic">Don Toliver Music</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 2-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/arrahman.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> A. R. Rahman</p>
+                                    <p><strong>Birthdate     :</strong> January 6, 1967</p>
+                                    <p><strong>Music         :</strong> Film Score, Classical, Electronic</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@ARRahman">A. R. Rahman</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 3-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/haelhusaini.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> Hael Husaini</p>
+                                    <p><strong>Birthdate     :</strong> February 10, 1988</p>
+                                    <p><strong>Music         :</strong> Pop, Ballad</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@HaelHusainiOfficial">Hael Husaini Official</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 4-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/travisscott.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> Travis Scott</p>
+                                    <p><strong>Birthdate     :</strong> April 30, 1991</p>
+                                    <p><strong>Music         :</strong> Hip-Hop, Trap, Psychedelic Rap</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@TravisScottXX">Travis Scott XX</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 5-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/playboicarti.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> Playboi Carti</p>
+                                    <p><strong>Birthdate     :</strong> September 13, 1996</p>
+                                    <p><strong>Music         :</strong> Experimental Hip-Hop, Trap</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@playboicarti">Playboi Carti</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 6-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/arcticmonkeys.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> Arctic Monkeys</p>
+                                    <p><strong>Formed in     :</strong> 2002</p>
+                                    <p><strong>Music         :</strong> Indie Rock, Garage Rock</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@arcticmonkeys">Official Arctic Monkeys</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 7-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/yuna.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> Yuna</p>
+                                    <p><strong>Birthdate     :</strong> November 14, 1986</p>
+                                    <p><strong>Music         :</strong> Pop, R&B, Indie</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@yuna">Yuna</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--artist 8-->
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="artists-thumb">
+                                <div class="artists-image-wrap">
+                                    <img src="images/artists/taylorswift.jpeg" class="artists-image img-fluid">
+                                </div>
+                                <div class="artists-hover">
+                                    <p><strong>Name          :</strong> Taylor Swift</p>
+                                    <p><strong>Birthdate     :</strong> December 13, 1989</p>
+                                    <p><strong>Music         :</strong> Pop, Country, Synth-pop</p>
+                                    <hr>
+                                    <p class="mb-0"><strong>Youtube Channel  :</strong> <a href="https://www.youtube.com/@TaylorSwift">TaylorSwift</a></p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+            
+
+<!--section 4: event tentative-->
+            <section class="schedule-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="text-white mb-4">Event Schedule</h1>
+
+                                <div class="table-responsive d-flex justify-content-center">
+                                    <table class="schedule-table table table-dark text-center" style="min-width: 1000px; font-size: 1.3rem;">
+                                        <thead>
+                                            <tr style="font-size: 1.7rem; font-weight: 800;" >
+                                                <th scope="col">Performance</th>
+                                                <th scope="col">Time</th>
+                                                <th scope="col">Artist / Band</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="font-size: 1.4rem; font-weight: 600;">
+                                            <tr>
+                                                <td>Rhythm Starter</td>
+                                                <td style="background-color: #2f2f2f;">10:00 - 11:30 AM</td>
+                                                <td style="background-color: #3a3a3a;">Hael Husaini</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bollywood Beats</td>
+                                                <td style="background-color: #2f2f2f;">11:30 AM - 1:00 PM</td>
+                                                <td style="background-color: #3a3a3a;">A. R. Rahman</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Trap Vibes</td>
+                                                <td style="background-color: #2f2f2f;">1:00 - 2:30 PM</td>
+                                                <td style="background-color: #3a3a3a;">Playboi Carti</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Indie Sound</td>
+                                                <td style="background-color: #2f2f2f;">2:30 - 4:00 PM</td>
+                                                <td style="background-color: #3a3a3a;">Arctic Monkeys</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Malaysian Soul</td>
+                                                <td style="background-color: #2f2f2f;">4:00 - 5:30 PM</td>
+                                                <td style="background-color: #3a3a3a;">Yuna</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pop Icon Hour</td>
+                                                <td style="background-color: #2f2f2f;">5:30 - 7:00 PM</td>
+                                                <td style="background-color: #3a3a3a;">Taylor Swift</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Auto-Tune Madness</td>
+                                                <td style="background-color: #2f2f2f;">7:00 - 8:30 PM</td>
+                                                <td style="background-color: #3a3a3a;">Don Toliver</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Finale Explosion</td>
+                                                <td style="background-color: #2f2f2f;">9:00 PM - 12:00 AM</td>
+                                                <td style="background-color: #3a3a3a;">Travis Scott</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                
+                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--section 5: ticket plans-->
+            <section class="pricing-section section-padding section-bg" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h2 class="text-center mb-4">Plans, you' love</h2>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+
+                            <!-- Early Bird Pass -->
+                            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                              <div class="pricing-thumb">
+                                <div class="d-flex">
+                                  <div>
+                                    <h3><small>Early Bird</small> RM266</h3>
+                                    <p style="font-weight: bold; color: black; margin-top: -10px;">Non-Malaysian: RM326</p>
+                                    <p class="pricing-tag"> 🔥 BEST                  Value !</p>
+                                  </div>
+                                </div>
+                          
+                                <ul class="pricing-list mt-3">
+                                  <li class="pricing-list-item">platform for potential customers</li>
+                                  <li class="pricing-list-item">digital experience</li>
+                                  <li class="pricing-list-item">high-quality sound</li>
+                                  <li class="pricing-list-item">standard content</li>
+                                </ul>
+                          
+                                <a class="link-fx-1 color-contrast-higher mt-4" href="ticket.html">
+                                  <span>Buy Ticket</span>
+                                  <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                      <circle cx="16" cy="16" r="15.5"></circle>
+                                      <line x1="10" y1="18" x2="16" y2="12"></line>
+                                      <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          
+                            <!-- Standard Pass -->
+                            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                              <div class="pricing-thumb">
+                                <div class="d-flex">
+                                  <div>
+                                    <h3><small>Standard</small> RM288</h3>
+                                    <p style="font-weight: bold; color: black; margin-top: -10px;">Non-Malaysian: RM348</p>
+                                    <p class="pricing-tag">🎟️ All - Access !</p>
+                                  </div>
+                                </div>
+                          
+                                <ul class="pricing-list mt-3">
+                                  <li class="pricing-list-item">platform for potential customers</li>
+                                  <li class="pricing-list-item">digital experience</li>
+                                  <li class="pricing-list-item">high-quality sound</li>
+                                  <li class="pricing-list-item">premium content</li>
+                                  <li class="pricing-list-item">live chat support</li>
+                                </ul>
+                          
+                                <a class="link-fx-1 color-contrast-higher mt-4" href="ticket.html">
+                                  <span>Buy Ticket</span>
+                                  <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                      <circle cx="16" cy="16" r="15.5"></circle>
+                                      <line x1="10" y1="18" x2="16" y2="12"></line>
+                                      <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          
+                            <!-- VIP Pass -->
+                            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                              <div class="pricing-thumb">
+                                <div class="d-flex">
+                                  <div>
+                                    <h3><small>VIP Pass</small> RM688</h3>
+                                    <p style="font-weight: bold; color: black; margin-top: -10px;">Non-Malaysian: RM748</p>
+                                    <p class="pricing-tag">⭐ Most Popular !</p>
+                                  </div>
+                                </div>
+                          
+                                <ul class="pricing-list mt-3">
+                                  <li class="pricing-list-item">Exclusive backstage access</li>
+                                  <li class="pricing-list-item">Priority check-in and entrance</li>
+                                  <li class="pricing-list-item">Premium lounge + merch pack</li>
+                                  <li class="pricing-list-item">Live chat & VIP support</li>
+                                </ul>
+                          
+                                <a class="link-fx-1 color-contrast-higher mt-4" href="ticket.html">
+                                  <span>Buy Ticket</span>
+                                  <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                      <circle cx="16" cy="16" r="15.5"></circle>
+                                      <line x1="10" y1="18" x2="16" y2="12"></line>
+                                      <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          
+                          </div>
+
+                    </div>
+                </div>
+            </section>
+
+<!--Section 6 : sponsors info-->
+            <section class="sponsors-section section-padding" id="section_6">
+                <div class="container">
+                  <div class="row">
+              
+                    <div class="col-12 text-center">
+                      <h2 class="mb-5">Our Sponsors</h2>
+                    </div>
+              
+                    <!-- Sponsor 1 -->
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <div class="text-center sponsor-card">
+                          <div class="sponsor-img-wrap">
+                            <img src="images/sponsors/sponsor1.jpeg" class="img-fluid rounded" alt="Sponsor 1">
+                          </div>
+                          <h5 class="mt-3 mb-2">RhythmX Apparel</h5>
+                          <p>“Style That Moves With the Beat”
+                            A streetwear brand born from the heart of youth culture, RhythmX Apparel supports creative expression and fuels festival fashion with bold, beat-inspired designs.</p>
+                        </div>
+                      </div>
+              
+                    <!-- Sponsor 2 -->
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <div class="text-center sponsor-card">
+                          <div class="sponsor-img-wrap">
+                            <img src="images/sponsors/sponsor2.jpeg" class="img-fluid rounded" alt="Sponsor 2">
+                          </div>
+                          <h5 class="mt-3 mb-2">SoundNest Studios</h5>
+                          <p>“Where Music Finds Its Wings”
+                            An innovative audio production hub empowering new and veteran artists alike, SoundNest Studios helps bring the best sound to life—on stage, online, and in your ears.</p>
+                        </div>
+                      </div>
+              
+                    <!-- Sponsor 3 -->
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <div class="text-center sponsor-card">
+                          <div class="sponsor-img-wrap">
+                            <img src="images/sponsors/sponsor3.jpeg" class="img-fluid rounded" alt="Sponsor 3">
+                          </div>
+                          <h5 class="mt-3 mb-2">Pulse Beverages</h5>
+                          <p>“Drink the Energy. Live the Vibe.”
+                            Pulse Beverages keeps crowds alive with flavor-packed energy drinks designed for long nights, bright lights, and unforgettable music experiences.</p>
+                        </div>
+                      </div>
+              
+                  </div>
+                </div>
+              </section>
+        </main>
+
+        <!--the orange bar before footer bar-->
+        <footer class="site-footer">
+            <div class="site-footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="text-white mb-lg-0">Vibe Divas 01A</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                            <ul class="social-icon d-flex justify-content-lg-end">
+                                <li class="social-icon-item">
+                                    <a href="https://x.com/arrahman/status/1858943507777409526" class="social-icon-link">
+                                        <span class="bi-twitter"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="https://m.facebook.com/?lid=16itaCeq0YdWp6seV&srlva=1" class="social-icon-link">
+                                        <span class="bi-apple"></span>
+                                    </a>
+                                </li>
+    
+                                <li class="social-icon-item">
+                                    <a href="https://www.instagram.com/p/CcEiV-fBfaY/?igsh=MTU0bTV6cjJvMHpieQ==" class="social-icon-link">
+                                        <span class="bi-instagram"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://youtu.be/8BQ6dKlssAg?si=TnLjm4kOAxxO73YG" class="social-icon-link">
+                                        <span class="bi-youtube"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://pin.it/269gsS9JY" class="social-icon-link">
+                                        <span class="bi-pinterest"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--bottom footer bar-->
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-4 pb-2">
+                        <h5 class="site-footer-title mb-3">Links</h5>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#section_1" class="site-footer-link">Home</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#section_2" class="site-footer-link">Our Team</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#section_3" class="site-footer-link">Artists</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#section_4" class="site-footer-link">Schedule</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#section_5" class="site-footer-link">Pricing</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#section_6" class="site-footer-link">Sponsors</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <h5 class="site-footer-title mb-3">Have a question?</h5>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 090-080-0760" class="site-footer-link">
+                                010-2154559
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="mailto:hello@company.com" class="site-footer-link">
+                                ranipavala09@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                        <h5 class="site-footer-title mb-3">Location</h5>
+
+                        <p class="text-white d-flex mt-3 mb-2">
+                        Surf Beach @ Sunway Lagoon</p>
+
+                        <a class="link-fx-1 color-contrast-higher mt-3" href="https://maps.app.goo.gl/UbCan13X1Rf77ASe9?g_st=aw">
+                            <span>Our Maps</span>
+                            <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15.5"></circle><line x1="10" y1="18" x2="16" y2="12"></line><line x1="16" y1="12" x2="22" y2="18"></line></g></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+           <!--bottom copywrite bar-->
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-12 mt-5">
+                            <p class="copyright-text">Copyright © 2025 Vibe Divas Web Prog Sec 01A</p>
+                        </div>
+
+                        <div class="col-lg-8 col-12 mt-lg-5">
+                            <ul class="site-footer-links">
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Terms &amp; Conditions</a>
+                                </li>
+
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Privacy Policy</a>
+                                </li>
+
+                                <li class="site-footer-link-item">
+                                    <a href="#" class="site-footer-link">Your Feedback</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- MODAL- prompt to ask whether user admin or user-->
+<div class="modal fade" id="roleModal" tabindex="-1" aria-labelledby="roleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="roleModalLabel">Select Your Role</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Are you an Admin or a User?</p>
+                <button class="btn btn-primary" onclick="window.location.href='/WP-Project/Admin/Login/admin_login.html'">Admin</button>
+                <button class="btn btn-warning" onclick="window.location.href='/WP-Project/User/Login/login.html'">User</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<!--Js files-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/click-scroll.js"></script>
+<script src="js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.pricing-section a').forEach(button => {
+        button.setAttribute('data-bs-toggle', 'modal');
+        button.setAttribute('data-bs-target', '#roleModal');
+        button.setAttribute('href', '#');
+    });
+});
+</script>
+
+</body>
+</html>
