@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Base Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @keyframes page-enter {
+        0% {
+          opacity: 0;
+          transform: translateY(12px);
+          filter: blur(8px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+
+      body {
+        animation: page-enter 0.6s ease-out both;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <span class="logo">Pavala Rani.S</span>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Portfolio 2026</p>
+          <h1>
+            Hi, I’m <span>Pavala</span>.<br />
+            Your typical CS student.<br/> (Maybe not).
+          </h1>
+          <p class="hero-subtitle">
+            A 22-year-old with a genuine curiosity for learning, exploring, and connecting.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View my work</a>
+            <a class="btn ghost" href="#about">Scroll ↓</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img class="hero-photo" src="images/landingpage_pic.jpg" alt="Portrait of Pavala" />
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <!-- FIXED: slideshow restored (one image at a time; left blurry, right clear) -->
+        <div class="about-background" aria-hidden="true">
+          <div class="about-slide slide-1">
+            <span class="about-bg left" style="background-image: url('images/aboutpic1.jpg');"></span>
+            <span class="about-bg right" style="background-image: url('images/aboutpic1.jpg');"></span>
+          </div>
+
+          <div class="about-slide slide-2">
+            <span class="about-bg left" style="background-image: url('images/aboutpic2.jpg');"></span>
+            <span class="about-bg right" style="background-image: url('images/aboutpic2.jpg');"></span>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <div class="section-header">
+              <h2>About Me</h2>
+              <p>Curious, empathetic, and thoughtfully human.</p>
+            </div>
+            <div class="about-story">
+              <p>
+                 I’m from Muar, Johor, and a Yayasan Khazanah Watan Scholar who’s naturally curious 
+                 about the world around me. I love travelling, hiking, and exploring new places, 
+                 whether that’s a quiet trail, a new city, or something I’ve never tried before. 
+                 When I’m slowing down, I’m usually listening to music or getting absorbed in a 
+                 movie. I’m an empath at heart and a huge animal lover too, which is why I often 
+                 carry dog and cat food with me—just in case I run into a stray who could use a 
+                 little care.
+              </p>
+            </div>
+          </div>
+          <div class="about-tags">
+            <button type="button">Detail-aware</button>
+            <button type="button">Fast Learner</button>
+            <button type="button">Reliable Team Player</button>
+            <button type="button">Clear Communicator</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="education" id="education">
+  <div class="section-header">
+    <h2>Education Background</h2>
+    <p>Learning experiences that shaped my journey so far.</p>
+  </div>
+  <div class="education-card">
+    <div class="education-carousel" data-carousel>
+      <button class="carousel-arrow prev" type="button" aria-label="Previous slide">
+        ‹
+      </button>
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <article class="carousel-slide">
+            <div class="carousel-content">
+              <div>
+                <h3>SJK(T) JALAN KHALIDI MUAR</h3>
+                <p class="meta">2011 - 2016</p>
+                <ul>
+                  <li>UPSR : 8A's</li>
+                  <li>Held the role of Head Prefect (Ketua Pengawas) in year 2016</li>
+                  <li>Actively participated in science fairs, writing and story-telling competitions</li>
+                </ul>
+              </div>
+              <div class="carousel-image">
+                <img src="images/primary.jpg" alt="Primary school" />
+              </div>
+            </div>
+          </article>
+          <article class="carousel-slide">
+            <div class="carousel-content">
+              <div>
+                <h3>SMK(P) SULTAN ABU BAKAR MUAR</h3>
+                <p class="meta">2017 - 2021</p>
+                <ul>
+                  <li>PT3 : 9A's </li>
+                  <li>SPM : 9A's </li>
+                  <li>President for Tamil Society in year 2021</li>
+                  <li>Head of Activity for Girl's Scout in year 2021</li>
+                  <li>Secretary for the Board of Prefects in year 2021</li>
+                  <li>Actively participated in swimming and writing compeitions from 2017 until 2020</li>
+                </ul>
+              </div>
+              <div class="carousel-image">
+                <img src="images/secondary.jpg" alt="Secondary school" />
+              </div>
+            </div>
+          </article>
+          <article class="carousel-slide">
+                  <div class="carousel-content">
+                    <div>
+                      <h3>Foundation in Computer Science <br/>UNITEN Putrajaya Campus</h3>
+                      <p class="meta">2022 - 2023</p>
+                      <ul>
+                        <li>CGPA : 4.00</li>
+                        <li>Maintained Dean's List throughout the year</li>
+                        <li>Actively participated in clubs and events, both varsity and state level</li>
+                      </ul>
+                    </div>
+                    <div class="carousel-image">
+                      <img src="images/foundy.jpg" alt="Foundation" />
+                    </div>
+                  </div>
+          </article>
+          <article class="carousel-slide">
+            <div class="carousel-content">
+              <div>
+                <h3>Bachelors of Computer Science (Software Engineering)<br/> UNITEN Putrajaya Campus</h3>
+                <p class="meta">2023 - Current</p>
+                <ul>
+                  <li>Current CGPA : 3.96</li>
+                  <li>Actively participated in clubs and events as committee</li>
+                </ul>
+              </div>
+              <div class="carousel-image">
+                <img src="images/degree.jpg" alt="Degree" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <button class="carousel-arrow next" type="button" aria-label="Next slide">
+        ›
+      </button>
+    </div>
+    <div class="carousel-dots" role="tablist" aria-label="Education slides">
+            <button class="dot active" type="button" aria-label="Go to primary" aria-pressed="true"></button>
+            <button class="dot" type="button" aria-label="Go to secondary" aria-pressed="false"></button>
+            <button class="dot" type="button" aria-label="Go to university" aria-pressed="false"></button>
+            <button class="dot" type="button" aria-label="Go to postgraduate" aria-pressed="false"></button>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="section-header">
+    <h2>Projects</h2>
+    <p>A few projects I’ve built, learned from, and improved.</p>
+  </div>
+  <div class="project-list is-collapsed">
+          <article class="project-card" data-project-title="Airport Luggage Management System" data-folder="projects/airportluggagesys/">
+            <div class="project-info">
+              <h3>Airport Luggage Management System</h3>
+              <p class="meta">Completed: March 2025</p>
+              <p>A console-based C++ project that simulates the flow of luggage handling and retrieval at an airport. The system models how 
+                luggage is transferred from aircraft storage to passengers using core data structures such as stacks, queues, arrays, and vectors. 
+                It includes a time-based luggage reclaim process, automatic handling of uncollected luggage, and owner verification before release. 
+                Unclaimed luggage storage is organised using sorting techniques to efficiently manage available space, reinforcing practical 
+                applications of data structures and algorithms in a real-world scenario.</p>
+              <ul>
+                <li>C++</li>
+                <li>Data Structures & Algorithms</li>
+                <li>VS Code</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="Math Explorer" data-folder="projects/mathexplorer/">
+            <div class="project-info">
+              <h3>Math Explorer</h3>
+              <p class="meta">Completed: March 2025</p>
+              <p>A child-friendly math learning app concept designed for primary school students (ages 6–10). 
+                I researched pain points in existing math apps through ethnographic observation and user analysis, 
+                then designed an interface that’s easier for kids to navigate—using clear difficulty labels (Easy/Medium/Hard),
+                interactive task flows, and a simple progress tracker to keep learning motivating. The final deliverables 
+                include a structured HCI report (personas, task analysis, scenarios, design principles) and a high-fidelity 
+                prototype of key screens like onboarding, difficulty selection, exercises, and progress tracking.</p>
+              <ul>
+                <li>Figma</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="Music Festival Web System" data-folder="projects/musicfest/">
+            <div class="project-info">
+              <h3>Music Festival Web System</h3>
+              <p class="meta">Completed: January 2025</p>
+              <p>A full-stack web project for a music festival that includes a public landing page and a role-based system 
+                for both users and administrators. Users can sign up, log in, purchase festival tickets by selecting ticket 
+                type and seating zone, and view their receipt and ticket details through a dashboard. Admins have their own 
+                login and dashboard to manage festival sub-events (name, date, time, place, organizer, and description). 
+                The project is backed by a MySQL database (users, admins, sub-events, and event registrations) and focuses on 
+                building a complete end-to-end web flow from authentication to data-driven pages.</p>
+              <ul>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>HTML, CSS</li>
+                <li>Javascript</li>
+                <li>Tailwind CSS</li>
+                <li>Alpine.js</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="REMinder Mobile Application" data-folder="projects/reminder/">
+            <div class="project-info">
+              <h3>REMinder Mobile Application</h3>
+              <p class="meta">Completed: April 2025</p>
+              <p>REMinder is a mobile application focused on improving users’ sleep quality through sleep 
+                tracking, personalized sleep logging, and expert backed tips. The application helps users understand 
+                their sleep patterns, build healthier bedtime habits, and maintain consistent sleep routines. It 
+                includes features such as sleep duration calculation, sleep quality evaluation, sleep history 
+                tracking, and educational sleep improvement content with video support.</p>
+              <ul>
+                <li>.NET MAUI framework</li>
+                <li>Visual Studio 2022</li>
+                <li>C#</li>
+                <li>SQLite</li>
+                <li>Firebase Realtime Database</li>
+                <li>XAML</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="Carbon Footprint Tracking Mobile Application Prototype" data-folder="projects/carbonfootprint/">
+            <div class="project-info">
+              <h3>Carbon Footprint Tracking Mobile Application Prototype</h3>
+              <p class="meta">Completed: January 2025</p>
+              <p>A mobile application concept designed to help users monitor and reduce their carbon footprint through daily activity 
+                tracking. The app allows users to log trips and activities, view carbon emission history, track monthly targets, 
+                complete sustainability missions, and compare progress through a leaderboard system. The overall goal is to promote 
+                environmentally conscious behavior through visualization, gamification, and progress insights.</p>
+              <ul>
+                <li>Figma</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="SimpleStore Product and Supplier Management System" data-folder="projects/storemanagement/">
+            <div class="project-info">
+              <h3>SimpleStore Product and Supplier Management System</h3>
+              <p class="meta">November 2025</p>
+              <p>SimpleStore is a web based CRUD application developed using the Laravel framework to manage 
+                products and their associated suppliers. The system implements a one to many relationship where 
+                each supplier can provide multiple products, while each product belongs to a single supplier. 
+                It allows users to create, view, update, and delete product and supplier records through a structured 
+                MVC architecture, complete with database migrations, Eloquent relationships, and RESTful routing. The 
+                application demonstrates strong backend fundamentals, clean data modeling, and practical use of Laravel artisan workflows.</p>
+              <ul>
+                <li>Laravel Framework</li>
+                <li>VS Code</li>
+                <li>MySQL</li>
+                <li>PHP</li>
+                <li>HTML, CSS</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="Library Management System" data-folder="projects/librarymanagementsys/">
+            <div class="project-info">
+              <h3>Library Management System</h3>
+              <p class="meta">Completed: December 2024</p>
+              <p>A console based library management system developed using object oriented programming principles. 
+                The system manages different types of library items including books, magazines, and theses while 
+                supporting core operations such as item search, borrowing, returning, availability tracking, and 
+                fine calculation. The project demonstrates strong application of inheritance, abstraction, polymorphism, 
+                and encapsulation through a structured class hierarchy and real world simulation of library workflows.</p>
+              <ul>
+                <li>Java</li>
+                <li>Object oriented programming</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="project-card" data-project-title="Online Bookstore Management System" data-folder="projects/bookstore/">
+            <div class="project-info">
+              <h3>Online Bookstore Management System</h3>
+              <p class="meta">Completed: December 2025</p>
+              <p>A full stack web based bookstore management system developed using a modern MVC framework. The 
+                application supports secure user authentication, relational database design, and complete CRUD 
+                functionality for managing authors, books, and categories. It implements many to many relationships 
+                between entities, dynamic Blade templating, and a reporting dashboard that summarizes bookstore data 
+                such as total books, authors, and categories. The project demonstrates practical backend development 
+                skills combined with structured frontend navigation and data driven views.</p>
+              <ul>
+                <li>Laravel Framework</li>
+                <li>VS Code</li>
+                <li>MySQL</li>
+                <li>PHP</li>
+                <li>HTML, CSS</li>
+              </ul>
+              <div class="project-actions">
+                <button class="project-docs" type="button">
+                  Supporting documents <span class="project-docs-icon" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="project-toggle" type="button" aria-expanded="false">
+          Show more projects <span aria-hidden="true">↓</span>
+        </button>
+        <div class="project-modal" aria-hidden="true">
+          <div class="project-modal-overlay" data-modal-close></div>
+          <div class="project-modal-card" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+            <h3 id="project-modal-title">Open project folder</h3>
+            <p class="project-modal-text"></p>
+            <div class="project-modal-actions">
+              <a class="project-modal-open" href="#" target="_blank" rel="noopener">Open folder</a>
+              <button class="project-modal-cancel" type="button" data-modal-close>Cancel</button>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+      <section class="involvement" id="involvement">
+  <div class="section-header">
+    <h2>Other Involvements</h2>
+    <p>Leadership, collaboration, and initiative.</p>
+  </div>
+  <div class="involvement-carousel-wrapper">
+    <div class="involvement-track" id="involvement-track">
+      <article class="involvement-card" id="involvement-1">
+        <div class="involvement-media">
+          <!-- TODO: replace involvement-1.jpg with actual filename in /involvements/ -->
+          <img src="involvements/involvement-1.jpg" alt="Director role at UNITEN Career Ambassador" />
+        </div>
+        <div class="involvement-content">
+          <h3>Director</h3>
+          <p class="involvement-meta">UNITEN Career Ambassador · Term 2024/2025</p>
+          <ul>
+            <li>Coordinated UNITEN Career Fair 2025 featuring 23 companies and 10 career talks across a 2-day event.</li>
+            <li>Led planning and execution of career talks by multiple industry companies (names will be added later).</li>
+            <li>Coordinated corporate site visits (companies will be added later).</li>
+            <li>Organized and contributed to CSR initiatives alongside career-related programs.</li>
+            <li>Oversaw coordination between university management, student committees, and external corporate partners.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="involvement-card" id="involvement-2">
+        <div class="involvement-media">
+          <!-- TODO: replace involvement-2.jpg with actual filename in /involvements/ -->
+          <img src="involvements/involvement-2.jpg" alt="Head of Public Relations at UNITEN Programming Club" />
+        </div>
+        <div class="involvement-content">
+          <h3>Head of Public Relations</h3>
+          <p class="involvement-meta">UNITEN Programming Club (Pro-C) · Term 2024/2025</p>
+          <ul>
+            <li>Led promotional strategy for technical events including talks, webinars, and seminars.</li>
+            <li>Part of the organizing committee for UNITEN Hackathon 2023.</li>
+            <li>Served in the organizing team for Rentas CTF.</li>
+            <li>Managed publicity materials and student engagement outreach.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="involvement-card" id="involvement-3">
+        <div class="involvement-media">
+          <!-- TODO: replace involvement-3.jpg with actual filename in /involvements/ -->
+          <img src="involvements/involvement-3.jpg" alt="Executive of Company Relations at UNITEN Career Ambassador" />
+        </div>
+        <div class="involvement-content">
+          <h3>Executive of Company Relations</h3>
+          <p class="involvement-meta">UNITEN Career Ambassador · Term 2023/2024</p>
+          <ul>
+            <li>Vice Head of ALCOM Site Visit coordination.</li>
+            <li>Vice Head of Schindler Career Talk organization.</li>
+            <li>Contacted and liaised with companies for UNITEN Career Fair 2024 participation.</li>
+            <li>Emceed career talk sessions and workshops (including a workshop by TalentHauz).</li>
+            <li>Managed corporate communications and partnership outreach.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="involvement-controls" aria-label="Other involvement carousel controls">
+      <button class="involvement-dot is-active" type="button" data-slide="0" aria-label="Go to involvement 1"></button>
+      <button class="involvement-dot" type="button" data-slide="1" aria-label="Go to involvement 2"></button>
+      <button class="involvement-dot" type="button" data-slide="2" aria-label="Go to involvement 3"></button>
+    </div>
+  </div>
+  <a class="btn ghost involvement-more" href="involvements.html">More pictures</a>
+</section>
+
+      <section class="skills" id="skills">
+        <div class="section-header">
+          <h2>Technical Skills</h2>
+          <p>Grouped with honest confidence indicators.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skills-column">
+            <h3>Languages</h3>
+            <ul>
+              <li>JavaScript <span>Used in production</span></li>
+              <li>TypeScript <span>Confident</span></li>
+              <li>Python <span>Used in production</span></li>
+            </ul>
+          </div>
+          <div class="skills-column">
+            <h3>Frameworks</h3>
+            <ul>
+              <li>React <span>Confident</span></li>
+              <li>Next.js <span>Used in production</span></li>
+              <li>Node.js <span>Confident</span></li>
+            </ul>
+          </div>
+          <div class="skills-column">
+            <h3>Tools</h3>
+            <ul>
+              <li>Figma <span>Daily</span></li>
+              <li>Notion <span>Daily</span></li>
+              <li>GitHub <span>Used in production</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div>
+        <h2>Let’s build something together.</h2>
+        <p>Reach out and let’s craft something beautiful.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hello@example.com">hello@example.com</a>
+        <a href="https://www.linkedin.com">LinkedIn</a>
+        <a href="https://github.com">GitHub</a>
+      </div>
+    </footer>
+       <script>
+      (() => {
+        const carousel = document.querySelector("[data-carousel]");
+        if (!carousel) return;
+
+        const track = carousel.querySelector(".carousel-track");
+        const slides = Array.from(track.children);
+        const prevButton = carousel.querySelector(".carousel-arrow.prev");
+        const nextButton = carousel.querySelector(".carousel-arrow.next");
+        const dots = Array.from(document.querySelectorAll(".carousel-dots .dot"));
+        let currentIndex = 0;
+
+        const update = () => {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          prevButton.disabled = currentIndex === 0;
+          nextButton.disabled = currentIndex === slides.length - 1;
+          dots.forEach((dot, index) => {
+            const isActive = index === currentIndex;
+            dot.classList.toggle("active", isActive);
+            dot.setAttribute("aria-pressed", String(isActive));
+          });
+        };
+
+        prevButton.addEventListener("click", () => {
+          currentIndex = Math.max(0, currentIndex - 1);
+          update();
+        });
+
+        nextButton.addEventListener("click", () => {
+          currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+          update();
+        });
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentIndex = index;
+            update();
+          });
+        });
+
+        window.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowLeft") {
+            currentIndex = Math.max(0, currentIndex - 1);
+            update();
+          }
+          if (event.key === "ArrowRight") {
+            currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+            update();
+          }
+        });
+
+        update();
+      })();
+    </script>
+    <script>
+      (() => {
+        const projectList = document.querySelector(".project-list");
+        const toggleButton = document.querySelector(".project-toggle");
+        const modal = document.querySelector(".project-modal");
+        const modalText = document.querySelector(".project-modal-text");
+        const modalOpen = document.querySelector(".project-modal-open");
+        const modalCloseButtons = document.querySelectorAll("[data-modal-close]");
+        const docButtons = document.querySelectorAll(".project-docs");
+        let lastFocused = null;
+
+        if (!projectList || !toggleButton || !modal) return;
+
+        toggleButton.addEventListener("click", () => {
+          const isCollapsed = projectList.classList.toggle("is-collapsed");
+          toggleButton.setAttribute("aria-expanded", String(!isCollapsed));
+          toggleButton.firstChild.textContent = isCollapsed ? "Show more projects " : "Show fewer projects ";
+        });
+
+        const openModal = (title, folder) => {
+          lastFocused = document.activeElement;
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          modalText.textContent = `This will open the folder for ${title}. Continue?`;
+          modalOpen.setAttribute("href", folder);
+          modalOpen.focus();
+        };
+
+        const closeModal = () => {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          if (lastFocused) lastFocused.focus();
+        };
+
+        docButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const card = button.closest(".project-card");
+            if (!card) return;
+            openModal(card.dataset.projectTitle, card.dataset.folder);
+          });
+        });
+
+        modalCloseButtons.forEach((button) => {
+          button.addEventListener("click", closeModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
+
+    <script>
+  const involvementTrack = document.getElementById("involvement-track");
+  const involvementDots = document.querySelectorAll(".involvement-dot");
+
+  if (involvementTrack && involvementDots.length) {
+    involvementDots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const slideIndex = Number(dot.dataset.slide || 0);
+        const slideWidth = involvementTrack.clientWidth;
+
+        involvementTrack.scrollTo({
+          left: slideWidth * slideIndex,
+          behavior: "smooth",
+        });
+
+        involvementDots.forEach((item) => item.classList.remove("is-active"));
+        dot.classList.add("is-active");
+      });
+    });
+
+    involvementTrack.addEventListener("scroll", () => {
+      const slideWidth = involvementTrack.clientWidth;
+      const activeIndex = Math.round(involvementTrack.scrollLeft / slideWidth);
+
+      involvementDots.forEach((item, index) => {
+        item.classList.toggle("is-active", index === activeIndex);
+      });
+    });
+  }
+</script>
+
+
+  </body>
+</html>
