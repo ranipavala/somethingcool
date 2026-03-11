@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Pictures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root { --bg-1:#070c18; --bg-2:#0d1730; --text:#edf2ff; --muted:#cad6ff; --panel:rgba(255,255,255,.06); --panel-border:rgba(255,255,255,.16); }
+      * { box-sizing: border-box; }
+      body { margin:0; min-height:100vh; font-family:"Manrope",system-ui,sans-serif; color:var(--text); background:radial-gradient(circle at 12% 10%, rgba(116,92,255,.22), transparent 35%),radial-gradient(circle at 88% 22%, rgba(75,145,255,.2), transparent 38%),linear-gradient(155deg,var(--bg-1),var(--bg-2)); }
+      .page { width:min(1160px,92vw); margin:0 auto; padding:2rem 0 3rem; }
+      .back-btn { display:inline-flex; align-items:center; gap:.45rem; padding:.68rem 1rem; border-radius:999px; text-decoration:none; color:var(--text); border:1px solid var(--panel-border); background:var(--panel); font-weight:600; }
+      h1 { margin:1rem 0 .35rem; font-size:clamp(1.8rem,3vw,2.5rem); letter-spacing:-.02em; }
+      .subtitle { margin:0 0 1rem; color:var(--muted); }
+      .gallery-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.95rem; }
+      .gallery-card { margin:0; border-radius:16px; overflow:hidden; border:1px solid var(--panel-border); background:rgba(255,255,255,.04); transition:transform .28s ease, box-shadow .28s ease; }
+      .gallery-card:hover { transform:translateY(-6px); box-shadow:0 20px 35px rgba(1,7,22,.45),0 0 18px rgba(147,176,255,.2); }
+      .thumb { all:unset; display:block; width:100%; cursor:zoom-in; }
+      .thumb img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+      .lightbox { position:fixed; inset:0; display:none; align-items:center; justify-content:center; padding:1rem; background:rgba(3,7,18,.84); backdrop-filter:blur(10px); z-index:1000; }
+      .lightbox.is-open { display:flex; }
+      .lightbox-content { position:relative; width:min(1080px,92vw); max-height:88vh; border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,.26); background:rgba(0,0,0,.35); }
+      .lightbox-image { width:100%; max-height:88vh; object-fit:contain; display:block; background:#040814; }
+      .icon-btn { position:absolute; z-index:2; width:44px; height:44px; border-radius:999px; border:1px solid rgba(255,255,255,.35); background:rgba(0,0,0,.38); color:#fff; display:grid; place-items:center; font-size:1.2rem; cursor:pointer; }
+      .close-btn { top:12px; right:12px; } .prev-btn,.next-btn { top:50%; transform:translateY(-50%); } .prev-btn { left:12px; } .next-btn { right:12px; }
+      @media (max-width:1024px){ .gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
+      @media (max-width:780px){ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+      @media (max-width:520px){ .gallery-grid{grid-template-columns:1fr;} }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <a class="back-btn" href="../index.html#involvement" aria-label="Back to involvement section">← Back to Other Involvements</a>
+      <h1>More Pictures</h1>
+      <p class="subtitle">A full gallery of involvement moments from events, programs, and team collaborations.</p>
+      <section class="gallery-grid" aria-label="Involvement gallery with 24 images">
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-01.jpg" alt="Involvement picture 01" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-02.jpg" alt="Involvement picture 02" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-03.jpg" alt="Involvement picture 03" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-04.jpg" alt="Involvement picture 04" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-05.jpg" alt="Involvement picture 05" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-06.jpg" alt="Involvement picture 06" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-07.jpg" alt="Involvement picture 07" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-08.jpg" alt="Involvement picture 08" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-09.jpg" alt="Involvement picture 09" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-10.jpg" alt="Involvement picture 10" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-11.jpg" alt="Involvement picture 11" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-12.jpg" alt="Involvement picture 12" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-13.jpg" alt="Involvement picture 13" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-14.jpg" alt="Involvement picture 14" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-15.jpg" alt="Involvement picture 15" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-16.jpg" alt="Involvement picture 16" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-17.jpg" alt="Involvement picture 17" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-18.jpg" alt="Involvement picture 18" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-19.jpg" alt="Involvement picture 19" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-20.jpg" alt="Involvement picture 20" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-21.jpg" alt="Involvement picture 21" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-22.jpg" alt="Involvement picture 22" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-23.jpg" alt="Involvement picture 23" loading="lazy" /></button></figure>
+        <figure class="gallery-card"><button class="thumb" type="button"><img src="picture-24.jpg" alt="Involvement picture 24" loading="lazy" /></button></figure>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-content" id="lightbox-content">
+        <button class="icon-btn close-btn" id="close-btn" type="button" aria-label="Close">✕</button>
+        <button class="icon-btn prev-btn" id="prev-btn" type="button" aria-label="Previous image">‹</button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="Expanded involvement picture" />
+        <button class="icon-btn next-btn" id="next-btn" type="button" aria-label="Next image">›</button>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const imageButtons = Array.from(document.querySelectorAll('.thumb'));
+        const images = imageButtons.map((button) => button.querySelector('img')).filter(Boolean);
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeBtn = document.getElementById('close-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentIndex = 0;
+
+        const render = () => {
+          const img = images[currentIndex];
+          if (!img) return;
+          lightboxImage.src = img.src;
+          lightboxImage.alt = img.alt;
+        };
+
+        const open = (index) => {
+          currentIndex = index;
+          render();
+          lightbox.classList.add('is-open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        };
+
+        const close = () => {
+          lightbox.classList.remove('is-open');
+          lightbox.setAttribute('aria-hidden', 'true');
+          lightboxImage.src = '';
+          document.body.style.overflow = '';
+        };
+
+        const next = () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          render();
+        };
+
+        const prev = () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          render();
+        };
+
+        imageButtons.forEach((button, index) => button.addEventListener('click', () => open(index)));
+        closeBtn.addEventListener('click', close);
+        nextBtn.addEventListener('click', next);
+        prevBtn.addEventListener('click', prev);
+
+        lightbox.addEventListener('click', (event) => {
+          if (!lightboxContent.contains(event.target)) close();
+        });
+
+        window.addEventListener('keydown', (event) => {
+          if (!lightbox.classList.contains('is-open')) return;
+          if (event.key === 'Escape') close();
+          if (event.key === 'ArrowRight') next();
+          if (event.key === 'ArrowLeft') prev();
+        });
+      })();
+    </script>
+  </body>
+</html>
