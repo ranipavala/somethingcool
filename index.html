@@ -611,7 +611,7 @@
   </h2>
   <p class="contact-subtext">open to graduate trainee programs · selangor, my</p>
   <div class="contact-links">
-    <a class="contact-link-item" href="mailto:chutneypasta04@gmail.com">
+    <a class="contact-link-item" href="mailto:ranipavals09@gmail.com">
       <svg class="contact-link-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="2"/>
         <path d="M2 7l10 7 10-7"/>
@@ -636,6 +636,17 @@
 
 <script>
 (() => {
+  /* ── SCROLL TO TOP ON LOAD ── */
+  if (history.scrollRestoration) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+
+  /* ── LOGO → HERO ── */
+  const navLogo = document.querySelector('.nav-logo');
+  if (navLogo) navLogo.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   /* ── CURSOR GLOW ── */
   const glow = document.getElementById('cursor-glow');
   document.addEventListener('mousemove', e => {
@@ -877,6 +888,15 @@
 
   prevBtn.addEventListener('click', () => navigate(-1));
   nextBtn.addEventListener('click', () => navigate(1));
+
+  /* touch swipe */
+  let touchStartX = 0;
+  const sqTrackWrap = track.parentElement;
+  sqTrackWrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  sqTrackWrap.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) navigate(dx < 0 ? 1 : -1);
+  }, { passive: true });
 
   let sqVisible = false;
   const sqOuter = document.getElementById('sq-outer');

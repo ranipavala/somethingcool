@@ -1016,10 +1016,53 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
   .nav-links a { padding: 0 10px; font-size: 10px; }
   .hero { padding: 60px 5vw; }
   .skills-cols { grid-template-columns: 1fr; }
-  .edu-nodes { grid-template-columns: 1fr; }
   .hero-sub-row { flex-direction: column; gap: 12px; }
   .contact-links { flex-direction: column; gap: 8px; }
   .contact-link-div { display: none; }
+
+  /* Education — vertical timeline */
+  .edu-nodes {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 28px;
+    grid-template-columns: unset;
+  }
+  .edu-nodes::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 14px;
+    bottom: 14px;
+    width: 1px;
+    background: #222;
+  }
+  .edu-node {
+    position: relative;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding-bottom: 28px;
+  }
+  .edu-dot {
+    position: absolute !important;
+    left: -25px;
+    top: 0;
+    margin: 0 !important;
+    opacity: 1 !important;
+  }
+  .edu-top-content {
+    padding-left: 0 !important;
+    max-width: 100% !important;
+  }
+  .edu-node.node-above .edu-top-content,
+  .edu-node.node-below .edu-top-content {
+    height: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .edu-school { max-width: 100%; }
+  .edu-timeline.is-visible .edu-node:hover .edu-top-content { transform: none; }
 }
 
 /* ─── PROJECT PAGE SHARED ───────────────────────────── */
@@ -1224,7 +1267,18 @@ a.proj-section-label:hover { color: var(--pink); }
   height: 70px;
   background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
   position: relative;
+  overflow: hidden;
 }
+.proj-more-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+.proj-more-card:hover .proj-more-thumb img { opacity: 0.85; }
 .proj-more-peek {
   display: none;
   position: absolute;
