@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>airport luggage — rani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="proj-page">
+
+<nav class="proj-nav">
+  <a class="proj-nav-back" href="index.html#work">← [ back to work ]</a>
+  <a class="proj-nav-logo" href="index.html">[ rani ]</a>
+</nav>
+
+<div class="proj-body">
+
+  <!-- METADATA -->
+  <div class="proj-meta-grid">
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ type ]</span>
+      <div>
+        <span class="tag tag-pink">group</span>
+        <span class="tag tag-pink">academic</span>
+      </div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ platform ]</span>
+      <div><span class="tag">console application</span></div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ timeline ]</span>
+      <span style="font-size:12px;color:#aaa;">march 2025</span>
+    </div>
+  </div>
+  <div class="proj-meta-stack">
+    <span class="proj-meta-label">[ stack ]</span>
+    <div>
+      <span class="tag">c++</span>
+      <span class="tag">oop</span>
+      <span class="tag">stack</span>
+      <span class="tag">queue</span>
+      <span class="tag">vector</span>
+      <span class="tag">array</span>
+      <span class="tag">sorting algorithms</span>
+      <span class="tag">searching algorithms</span>
+    </div>
+  </div>
+
+  <hr class="proj-divider" />
+
+  <!-- HEADLINE -->
+  <span class="proj-company-label">[ uniten academic project — data structures & algorithms ]</span>
+  <p class="proj-headline-single">missing bags, wrong queues, unclaimed luggage — built the system that solves all three.</p>
+
+  <!-- CONTENT ROWS -->
+  <div class="proj-content-rows">
+    <div class="proj-row">
+      <span class="proj-row-label">[ problem ]</span>
+      <p class="proj-row-text">airports process thousands of bags daily. without a structured system, luggage can be misplaced, delayed, or impossible to trace — especially when multiple stages of handling are involved.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 580 84" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="11" width="136" height="62" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="70" y="33" text-anchor="middle" fill="#ff4d8d" font-size="12" font-weight="700" font-family="monospace">1000s</text>
+          <text x="70" y="48" text-anchor="middle" fill="#888" font-size="9" font-family="monospace">bags per day</text>
+          <text x="70" y="63" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">no structure</text>
+          <line x1="138" y1="42" x2="174" y2="42" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="171,39 177,42 171,45" fill="#ff4d8d"/>
+          <rect x="177" y="11" width="80" height="62" rx="2" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+          <text x="217" y="52" text-anchor="middle" fill="#2e2e2e" font-size="28" font-weight="700" font-family="monospace">?</text>
+          <line x1="257" y1="42" x2="293" y2="42" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="290,39 296,42 290,45" fill="#ff4d8d"/>
+          <rect x="296" y="11" width="282" height="62" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="437" y="32" text-anchor="middle" fill="#cc4444" font-size="10" font-weight="700" font-family="monospace">missing · delayed · lost</text>
+          <text x="437" y="48" text-anchor="middle" fill="#883333" font-size="9" font-family="monospace">no structure, no traceability</text>
+          <text x="437" y="63" text-anchor="middle" fill="#553333" font-size="8" font-family="monospace">impossible to audit at scale</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ solution ]</span>
+      <p class="proj-row-text">a console-based c++ system simulating the complete airport luggage lifecycle: aircraft arrival → unloading (stack, LIFO) → baggage reclaim belt (queue, FIFO) → passenger verification → unclaimed storage. each stage uses the most appropriate data structure for the operation.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 600 72" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="10" width="98" height="52" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="51" y="28" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">ARRIVAL</text>
+          <text x="51" y="42" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">aircraft cargo</text>
+          <text x="51" y="55" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">bags loaded</text>
+          <line x1="100" y1="36" x2="112" y2="36" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="109,33 115,36 109,39" fill="#ff4d8d"/>
+          <rect x="116" y="10" width="98" height="52" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="165" y="26" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">UNLOAD</text>
+          <text x="165" y="40" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">stack</text>
+          <text x="165" y="54" text-anchor="middle" fill="#ff4d8d" font-size="8" font-family="monospace">LIFO</text>
+          <line x1="214" y1="36" x2="226" y2="36" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="223,33 229,36 223,39" fill="#ff4d8d"/>
+          <rect x="230" y="10" width="98" height="52" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="279" y="26" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">RECLAIM</text>
+          <text x="279" y="40" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">queue</text>
+          <text x="279" y="54" text-anchor="middle" fill="#ff4d8d" font-size="8" font-family="monospace">FIFO</text>
+          <line x1="328" y1="36" x2="340" y2="36" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="337,33 343,36 337,39" fill="#ff4d8d"/>
+          <rect x="344" y="10" width="86" height="52" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="387" y="28" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">VERIFY</text>
+          <text x="387" y="42" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">passenger</text>
+          <text x="387" y="55" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">ID check</text>
+          <line x1="430" y1="36" x2="442" y2="36" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="439,33 445,36 439,39" fill="#ff4d8d"/>
+          <rect x="446" y="10" width="152" height="52" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="522" y="28" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">OUTPUT</text>
+          <text x="522" y="42" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">claimed ✓</text>
+          <text x="522" y="55" text-anchor="middle" fill="#336644" font-size="7" font-family="monospace">or vector storage</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ decisions ]</span>
+      <p class="proj-row-text">used a stack for aircraft cargo because the last bag loaded must be the first unloaded (LIFO). used a queue for baggage reclaim because passengers collect in arrival order (FIFO). used vectors for dynamic unclaimed storage since bag count is unpredictable. sorting algorithms applied to unclaimed storage for efficient retrieval.</p>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ impact ]</span>
+      <p class="proj-row-text">demonstrates how abstract data structures map directly to real-world operational problems. applied multiple data structures in one integrated system — stack, queue, vector, and array — each chosen deliberately for its use case.</p>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ highlights ]</span>
+    <div class="proj-ach-band">
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="4" data-dur="600">4</p>
+        <p class="proj-ach-desc">data structures applied: stack, queue, vector, array</p>
+        <div style="display:flex;gap:4px;margin-top:10px;justify-content:center;flex-wrap:wrap">
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">stack</span>
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">queue</span>
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">vector</span>
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">array</span>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="6" data-dur="700">6</p>
+        <p class="proj-ach-desc">C++ classes built</p>
+        <div style="display:flex;gap:6px;margin-top:10px;justify-content:center">
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.9"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.8"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.7"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.6"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.5"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.4"></div>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="2" data-dur="500">2</p>
+        <p class="proj-ach-desc">algorithms: sort and search on unclaimed storage</p>
+        <div style="display:flex;gap:6px;margin-top:10px;justify-content:center">
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">sort</span>
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">search</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ screens ]</span>
+    <div class="proj-screens-grid">
+      <div class="proj-screen-cell"><img src="projects/airportluggagesys/pic1.png" alt="aircraft unloading" loading="lazy" /><span class="proj-screen-lbl">aircraft unloading</span></div>
+      <div class="proj-screen-cell"><img src="projects/airportluggagesys/pic2.png" alt="baggage reclaim" loading="lazy" /><span class="proj-screen-lbl">baggage reclaim</span></div>
+      <div class="proj-screen-cell"><img src="projects/airportluggagesys/pic3.png" alt="passenger verification" loading="lazy" /><span class="proj-screen-lbl">passenger verification</span></div>
+      <div class="proj-screen-cell"><img src="projects/airportluggagesys/pic4.png" alt="unclaimed storage" loading="lazy" /><span class="proj-screen-lbl">unclaimed storage</span></div>
+    </div>
+  </div>
+
+  <!-- MORE PROJECTS -->
+  <div class="proj-section">
+    <a class="proj-section-label" href="index.html#work">[ more projects ]</a>
+    <div class="proj-more-grid">
+      <a class="proj-more-card" href="emoshield.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">EmoShield</span>
+          <span class="proj-more-type">flutter · tensorflow lite · mediapipe · firebase</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="guardian-malaysia.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Guardian Malaysia Search QA Pipeline</span>
+          <span class="proj-more-type">node.js · puppeteer · openai api</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="bookstore.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Online Bookstore Management System</span>
+          <span class="proj-more-type">laravel · mysql · eloquent · pivot tables</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="music-festival.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Music Festival Web System</span>
+          <span class="proj-more-type">php · mysql · bootstrap · tailwind</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="proj-back" href="index.html#work">← back to project list</a>
+
+</div>
+<script src="lightbox.js"></script>
+<script>
+(function () {
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  document.querySelectorAll('.proj-ach-num[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    const dur    = +(el.dataset.dur || 1200);
+    const fmt    = el.dataset.fmt || '';
+    let started  = false;
+    new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting || started) return;
+      started = true;
+      const t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const v = Math.round(ease(p) * target);
+        el.textContent = fmt === 'k' ? v + 'k' : fmt === '%' ? v + '%' : fmt === 'kg' ? v + 'kg' : v;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.5 }).observe(el);
+  });
+})();
+</script>
+</body>
+</html>

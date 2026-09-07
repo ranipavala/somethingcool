@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>reminder — rani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="proj-page">
+
+<nav class="proj-nav">
+  <a class="proj-nav-back" href="index.html#work">← [ back to work ]</a>
+  <a class="proj-nav-logo" href="index.html">[ rani ]</a>
+</nav>
+
+<div class="proj-body">
+
+  <!-- METADATA -->
+  <div class="proj-meta-grid">
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ type ]</span>
+      <div>
+        <span class="tag tag-pink">group</span>
+        <span class="tag tag-pink">academic</span>
+      </div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ platform ]</span>
+      <div><span class="tag">mobile app</span></div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ timeline ]</span>
+      <span style="font-size:12px;color:#aaa;">april 2025</span>
+    </div>
+  </div>
+  <div class="proj-meta-stack">
+    <span class="proj-meta-label">[ stack ]</span>
+    <div>
+      <span class="tag">.net maui</span>
+      <span class="tag">c#</span>
+      <span class="tag">xaml</span>
+      <span class="tag">sqlite</span>
+      <span class="tag">firebase realtime database</span>
+      <span class="tag">visual studio 2022</span>
+    </div>
+  </div>
+
+  <hr class="proj-divider" />
+
+  <!-- HEADLINE -->
+  <span class="proj-company-label">[ uniten academic project — mobile application development ]</span>
+  <p class="proj-headline-single">sleep tracked nightly, habits logged daily.</p>
+
+  <!-- CONTENT ROWS -->
+  <div class="proj-content-rows">
+    <div class="proj-row">
+      <span class="proj-row-label">[ problem ]</span>
+      <p class="proj-row-text">most people manually estimate their sleep duration and have no organised record of their patterns over time. without data, it's impossible to identify what's causing poor sleep or measure whether habits are improving.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 560 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="14" width="110" height="44" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="57" y="31" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">BEDTIME</text>
+          <text x="57" y="47" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">slept at: ??:??</text>
+          <line x1="112" y1="36" x2="144" y2="36" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="141,33 147,36 141,39" fill="#ff4d8d"/>
+          <rect x="148" y="14" width="110" height="44" rx="2" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+          <text x="203" y="31" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">ESTIMATE</text>
+          <text x="203" y="47" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">~8 hours?</text>
+          <line x1="258" y1="36" x2="290" y2="36" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="287,33 293,36 287,39" fill="#ff4d8d"/>
+          <rect x="294" y="8" width="264" height="60" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="426" y="28" text-anchor="middle" fill="#cc4444" font-size="10" font-weight="700" font-family="monospace">no record, no history</text>
+          <text x="426" y="44" text-anchor="middle" fill="#883333" font-size="9" font-family="monospace">can't identify patterns</text>
+          <text x="426" y="59" text-anchor="middle" fill="#553333" font-size="8" font-family="monospace">impossible to improve blindly</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ solution ]</span>
+      <p class="proj-row-text">a cross-platform mobile app where users log bedtime and wake-up time, get automatic duration calculation, review sleep quality, access sleep history, and read educational tips and video recommendations — all backed by both local (sqlite) and cloud (firebase) storage.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 556 68" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="10" width="158" height="48" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="81" y="27" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">LOG</text>
+          <text x="81" y="41" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">bedtime + wake time</text>
+          <text x="81" y="52" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">timestamp in</text>
+          <line x1="160" y1="34" x2="174" y2="34" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="171,31 177,34 171,37" fill="#ff4d8d"/>
+          <rect x="178" y="10" width="140" height="48" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="248" y="27" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">AUTO CALC</text>
+          <text x="248" y="41" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">duration</text>
+          <text x="248" y="52" text-anchor="middle" fill="#555" font-size="7" font-family="monospace">no manual input</text>
+          <line x1="318" y1="34" x2="332" y2="34" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="329,31 335,34 329,37" fill="#ff4d8d"/>
+          <rect x="336" y="10" width="218" height="48" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="445" y="25" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">STORED</text>
+          <text x="445" y="39" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">SQLite (offline)</text>
+          <text x="445" y="52" text-anchor="middle" fill="#336644" font-size="8" font-family="monospace">+ Firebase (cloud sync)</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ decisions ]</span>
+      <p class="proj-row-text">used sqlite for local offline storage so the app works without internet. used firebase realtime database for cloud sync so data persists across devices. chose .net maui for cross-platform capability. auto-calculation of sleep duration removes manual estimation entirely — the app does the maths.</p>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ impact ]</span>
+      <p class="proj-row-text">gives users a concrete, data-backed view of their sleep habits over time rather than relying on memory or estimation. combines local and cloud databases in one mobile app demonstrating practical multi-database architecture.</p>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ highlights ]</span>
+    <div class="proj-ach-band">
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="2" data-dur="500">2</p>
+        <p class="proj-ach-desc">databases: SQLite locally, Firebase in the cloud</p>
+        <div style="display:flex;gap:6px;margin-top:10px;justify-content:center">
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">SQLite</span>
+          <span style="font-size:10px;padding:3px 8px;border:0.5px solid #2a2a2a;border-radius:2px;color:#ccc;background:transparent;font-family:monospace">Firebase</span>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="10" data-dur="800">10</p>
+        <p class="proj-ach-desc">screens across the full user journey</p>
+        <div style="display:flex;gap:3px;margin-top:10px;justify-content:center;flex-wrap:wrap">
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:14px;height:20px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num">0</p>
+        <p class="proj-ach-desc">manual input — bedtime in, wake time in, duration calculated instantly</p>
+        <div style="margin-top:10px;text-align:center">
+          <span style="font-size:8px;padding:3px 10px;border:1px solid #224433;border-radius:2px;color:#4dcc88;font-family:monospace;background:#080f0a">AUTO CALC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ screens ]</span>
+    <div class="proj-screens-grid">
+      <div class="proj-screen-cell"><img src="projects/reminder/pic1.png" alt="home dashboard" loading="lazy" /><span class="proj-screen-lbl">home dashboard</span></div>
+      <div class="proj-screen-cell"><img src="projects/reminder/pic2.png" alt="sleep log" loading="lazy" /><span class="proj-screen-lbl">sleep log</span></div>
+      <div class="proj-screen-cell"><img src="projects/reminder/pic3.png" alt="sleep history" loading="lazy" /><span class="proj-screen-lbl">sleep history</span></div>
+      <div class="proj-screen-cell"><img src="projects/reminder/pic4.png" alt="educational tips" loading="lazy" /><span class="proj-screen-lbl">educational tips</span></div>
+    </div>
+  </div>
+
+  <!-- MORE PROJECTS -->
+  <div class="proj-section">
+    <a class="proj-section-label" href="index.html#work">[ more projects ]</a>
+    <div class="proj-more-grid">
+      <a class="proj-more-card" href="bookstore.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Online Bookstore Management System</span>
+          <span class="proj-more-type">laravel · mysql · eloquent · pivot tables</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="music-festival.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Music Festival Web System</span>
+          <span class="proj-more-type">php · mysql · bootstrap · tailwind</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="simplestore.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">SimpleStore Product and Supplier Management System</span>
+          <span class="proj-more-type">laravel · mysql · eloquent</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="library-management.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Library Management System</span>
+          <span class="proj-more-type">java · oop · abstract classes</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="proj-back" href="index.html#work">← back to project list</a>
+
+</div>
+<script src="lightbox.js"></script>
+<script>
+(function () {
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  document.querySelectorAll('.proj-ach-num[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    const dur    = +(el.dataset.dur || 1200);
+    const fmt    = el.dataset.fmt || '';
+    let started  = false;
+    new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting || started) return;
+      started = true;
+      const t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const v = Math.round(ease(p) * target);
+        el.textContent = fmt === 'k' ? v + 'k' : fmt === '%' ? v + '%' : fmt === 'kg' ? v + 'kg' : v;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.5 }).observe(el);
+  });
+})();
+</script>
+</body>
+</html>

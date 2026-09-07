@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>library management — rani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="proj-page">
+
+<nav class="proj-nav">
+  <a class="proj-nav-back" href="index.html#work">← [ back to work ]</a>
+  <a class="proj-nav-logo" href="index.html">[ rani ]</a>
+</nav>
+
+<div class="proj-body">
+
+  <!-- METADATA -->
+  <div class="proj-meta-grid">
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ type ]</span>
+      <div>
+        <span class="tag tag-pink">group</span>
+        <span class="tag tag-pink">academic</span>
+      </div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ platform ]</span>
+      <div><span class="tag">console application</span></div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ timeline ]</span>
+      <span style="font-size:12px;color:#aaa;">december 2024</span>
+    </div>
+  </div>
+  <div class="proj-meta-stack">
+    <span class="proj-meta-label">[ stack ]</span>
+    <div>
+      <span class="tag">java</span>
+      <span class="tag">oop</span>
+      <span class="tag">inheritance</span>
+      <span class="tag">encapsulation</span>
+      <span class="tag">abstraction</span>
+      <span class="tag">polymorphism</span>
+    </div>
+  </div>
+
+  <hr class="proj-divider" />
+
+  <!-- HEADLINE -->
+  <span class="proj-company-label">[ uniten academic project — object-oriented programming ]</span>
+  <p class="proj-headline-single">books, magazines, theses — one system that borrows, returns, and fines automatically.</p>
+
+  <!-- CONTENT ROWS -->
+  <div class="proj-content-rows">
+    <div class="proj-row">
+      <span class="proj-row-label">[ problem ]</span>
+      <p class="proj-row-text">libraries manage multiple resource types — books, magazines, theses — each with different properties but shared behaviours like borrowing, returning, and availability tracking. managing this manually or with separate systems creates inconsistency.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 560 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="12" width="158" height="56" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="81" y="31" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">TYPE 1</text>
+          <text x="81" y="47" text-anchor="middle" fill="#bbb" font-size="10" font-weight="700" font-family="monospace">books</text>
+          <text x="81" y="60" text-anchor="middle" fill="#333" font-size="8" font-family="monospace">own system</text>
+          <line x1="162" y1="12" x2="162" y2="68" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,3"/>
+          <rect x="201" y="12" width="158" height="56" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="280" y="31" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">TYPE 2</text>
+          <text x="280" y="47" text-anchor="middle" fill="#bbb" font-size="10" font-weight="700" font-family="monospace">magazines</text>
+          <text x="280" y="60" text-anchor="middle" fill="#333" font-size="8" font-family="monospace">own system</text>
+          <line x1="361" y1="12" x2="361" y2="68" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,3"/>
+          <rect x="400" y="12" width="158" height="56" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="479" y="31" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">TYPE 3</text>
+          <text x="479" y="47" text-anchor="middle" fill="#bbb" font-size="10" font-weight="700" font-family="monospace">theses</text>
+          <text x="479" y="60" text-anchor="middle" fill="#333" font-size="8" font-family="monospace">own system</text>
+          <text x="280" y="76" text-anchor="middle" fill="#332222" font-size="8" font-family="monospace">three types, no shared borrow / return / fine logic</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ solution ]</span>
+      <p class="proj-row-text">a console-based java system with an abstract class hierarchy (LibraryItem → Book, Magazine, Thesis), a searchable catalogue, borrow/return workflows, automatic fine calculation at rm 0.50/day with a 7-day return window, and a pre-seeded library with real items ready to demo all flows immediately.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 500 108" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="150" y="8" width="200" height="40" rx="2" fill="#0d0d0d" stroke="#ff4d8d44" stroke-width="1"/>
+          <text x="250" y="24" text-anchor="middle" fill="#ff9cc0" font-size="8" font-family="monospace">ABSTRACT CLASS</text>
+          <text x="250" y="38" text-anchor="middle" fill="#ff4d8d" font-size="10" font-weight="700" font-family="monospace">LibraryItem</text>
+          <line x1="250" y1="48" x2="250" y2="58" stroke="#444" stroke-width="1"/>
+          <line x1="62" y1="58" x2="438" y2="58" stroke="#444" stroke-width="1"/>
+          <line x1="62" y1="58" x2="62" y2="64" stroke="#444" stroke-width="1"/>
+          <line x1="250" y1="58" x2="250" y2="64" stroke="#444" stroke-width="1"/>
+          <line x1="438" y1="58" x2="438" y2="64" stroke="#444" stroke-width="1"/>
+          <rect x="2" y="64" width="120" height="38" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="62" y="80" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">EXTENDS</text>
+          <text x="62" y="94" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">Book</text>
+          <rect x="190" y="64" width="120" height="38" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="250" y="80" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">EXTENDS</text>
+          <text x="250" y="94" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">Magazine</text>
+          <rect x="378" y="64" width="120" height="38" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="438" y="80" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">EXTENDS</text>
+          <text x="438" y="94" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">Thesis</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ decisions ]</span>
+      <p class="proj-row-text">used an abstract parent class (LibraryItem) so all resource types share borrow/return logic — adding a new type only requires extending the class, not rewriting existing logic. pre-seeded 3 items (The Great Gatsby, National Geographic issue 202, AI in Healthcare thesis) so every workflow can be demonstrated without setup.</p>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ impact ]</span>
+      <p class="proj-row-text">345 lines of java in a single clean file. demonstrates all four oop principles through a realistic domain — the kind of system design that scales to real library software.</p>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ highlights ]</span>
+    <div class="proj-ach-band">
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="345" data-dur="1400">345</p>
+        <p class="proj-ach-desc">lines of Java in a single file</p>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:2px;align-items:center">
+          <div style="width:60%;height:2px;background:#2a2a2a;border-radius:1px"></div>
+          <div style="width:80%;height:2px;background:#2a2a2a;border-radius:1px"></div>
+          <div style="width:50%;height:2px;background:#ff4d8d;border-radius:1px;opacity:0.6"></div>
+          <div style="width:70%;height:2px;background:#2a2a2a;border-radius:1px"></div>
+          <div style="width:40%;height:2px;background:#2a2a2a;border-radius:1px"></div>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num">RM 0.50</p>
+        <p class="proj-ach-desc">per day fine with a 7 day return window</p>
+        <div style="margin-top:10px;text-align:center">
+          <div style="display:inline-block;border:1px solid #2a2a2a;border-radius:2px;padding:3px 8px;background:#111">
+            <div style="font-size:7px;color:#555;font-family:monospace">overdue × days</div>
+            <div style="font-size:8px;color:#ff9cc0;font-family:monospace;margin-top:1px">= fine auto</div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="3" data-dur="600">3</p>
+        <p class="proj-ach-desc">item types managed under one abstract class</p>
+        <div style="display:flex;gap:4px;margin-top:10px;justify-content:center">
+          <span style="font-size:8px;padding:2px 5px;border:1px solid #224433;border-radius:2px;color:#4dcc88;font-family:monospace;background:#080f0a">Book</span>
+          <span style="font-size:8px;padding:2px 5px;border:1px solid #224433;border-radius:2px;color:#4dcc88;font-family:monospace;background:#080f0a">Magazine</span>
+          <span style="font-size:8px;padding:2px 5px;border:1px solid #224433;border-radius:2px;color:#4dcc88;font-family:monospace;background:#080f0a">Thesis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ screens ]</span>
+    <div class="proj-screens-grid">
+      <div class="proj-screen-cell"><img src="projects/librarymanagementsys/pic1.png" alt="main menu" loading="lazy" /><span class="proj-screen-lbl">main menu</span></div>
+      <div class="proj-screen-cell"><img src="projects/librarymanagementsys/pic2.png" alt="borrow item" loading="lazy" /><span class="proj-screen-lbl">borrow item</span></div>
+      <div class="proj-screen-cell"><img src="projects/librarymanagementsys/pic3.png" alt="return item" loading="lazy" /><span class="proj-screen-lbl">return item</span></div>
+      <div class="proj-screen-cell"><img src="projects/librarymanagementsys/pic4.png" alt="search catalogue" loading="lazy" /><span class="proj-screen-lbl">search catalogue</span></div>
+    </div>
+  </div>
+
+  <!-- MORE PROJECTS -->
+  <div class="proj-section">
+    <a class="proj-section-label" href="index.html#work">[ more projects ]</a>
+    <div class="proj-more-grid">
+      <a class="proj-more-card" href="reminder.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">REMinder Mobile Application</span>
+          <span class="proj-more-type">.net maui · sqlite · firebase</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="simplestore.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">SimpleStore Product and Supplier Management System</span>
+          <span class="proj-more-type">laravel · mysql · eloquent</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="carbon-footprint.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Carbon Footprint Tracking Mobile App Prototype</span>
+          <span class="proj-more-type">figma · ucd · ux design</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="math-explorer.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Math Explorer</span>
+          <span class="proj-more-type">figma · python · matplotlib · ucd</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="proj-back" href="index.html#work">← back to project list</a>
+
+</div>
+<script src="lightbox.js"></script>
+<script>
+(function () {
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  document.querySelectorAll('.proj-ach-num[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    const dur    = +(el.dataset.dur || 1200);
+    const fmt    = el.dataset.fmt || '';
+    let started  = false;
+    new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting || started) return;
+      started = true;
+      const t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const v = Math.round(ease(p) * target);
+        el.textContent = fmt === 'k' ? v + 'k' : fmt === '%' ? v + '%' : fmt === 'kg' ? v + 'kg' : v;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.5 }).observe(el);
+  });
+})();
+</script>
+</body>
+</html>

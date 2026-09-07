@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bookstore — rani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="proj-page">
+
+<nav class="proj-nav">
+  <a class="proj-nav-back" href="index.html#work">← [ back to work ]</a>
+  <a class="proj-nav-logo" href="index.html">[ rani ]</a>
+</nav>
+
+<div class="proj-body">
+
+  <!-- METADATA -->
+  <div class="proj-meta-grid">
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ type ]</span>
+      <div>
+        <span class="tag tag-pink">group</span>
+        <span class="tag tag-pink">academic</span>
+      </div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ platform ]</span>
+      <div><span class="tag">web application</span></div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ timeline ]</span>
+      <span style="font-size:12px;color:#aaa;">december 2025</span>
+    </div>
+  </div>
+  <div class="proj-meta-stack">
+    <span class="proj-meta-label">[ stack ]</span>
+    <div>
+      <span class="tag">laravel</span>
+      <span class="tag">php</span>
+      <span class="tag">mysql</span>
+      <span class="tag">html5</span>
+      <span class="tag">css3</span>
+      <span class="tag">blade templates</span>
+      <span class="tag">eloquent orm</span>
+    </div>
+  </div>
+
+  <hr class="proj-divider" />
+
+  <!-- HEADLINE -->
+  <span class="proj-company-label">[ uniten academic project — full stack web development ]</span>
+  <p class="proj-headline-single">one book, multiple authors, multiple categories — built the system that keeps track of all of it.</p>
+
+  <!-- CONTENT ROWS -->
+  <div class="proj-content-rows">
+    <div class="proj-row">
+      <span class="proj-row-label">[ problem ]</span>
+      <p class="proj-row-text">bookstores managing large collections need to track books, their authors, and categories — but these relationships are complex. one book can have multiple authors and belong to multiple categories simultaneously.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 520 96" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="195" y="28" width="130" height="36" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="260" y="44" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">Book</text>
+          <text x="260" y="57" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">many relationships</text>
+          <rect x="2" y="6" width="80" height="24" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="42" y="21" text-anchor="middle" fill="#cc4444" font-size="8" font-family="monospace">Author 1</text>
+          <rect x="2" y="66" width="80" height="24" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="42" y="81" text-anchor="middle" fill="#cc4444" font-size="8" font-family="monospace">Author 2</text>
+          <line x1="82" y1="18" x2="195" y2="40" stroke="#662222" stroke-width="1"/>
+          <line x1="82" y1="78" x2="195" y2="52" stroke="#662222" stroke-width="1"/>
+          <rect x="438" y="6" width="80" height="24" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="478" y="21" text-anchor="middle" fill="#cc4444" font-size="8" font-family="monospace">Category 1</text>
+          <rect x="438" y="66" width="80" height="24" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="478" y="81" text-anchor="middle" fill="#cc4444" font-size="8" font-family="monospace">Category 2</text>
+          <line x1="438" y1="18" x2="325" y2="40" stroke="#662222" stroke-width="1"/>
+          <line x1="438" y1="78" x2="325" y2="52" stroke="#662222" stroke-width="1"/>
+          <text x="260" y="92" text-anchor="middle" fill="#332222" font-size="8" font-family="monospace">complex many-to-many — needs a structured approach</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ solution ]</span>
+      <p class="proj-row-text">a laravel-based bookstore management system with secure authentication, full crud for books, authors, and categories, many-to-many relationships managed via pivot tables, and a reporting dashboard showing total books, authors, and categories at a glance.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 460 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="8" width="100" height="94" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="52" y="46" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">TABLE</text>
+          <text x="52" y="60" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">books</text>
+          <line x1="102" y1="28" x2="144" y2="28" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="141,25 147,28 141,31" fill="#ff4d8d"/>
+          <rect x="148" y="8" width="130" height="40" rx="2" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+          <text x="213" y="24" text-anchor="middle" fill="#666" font-size="8" font-family="monospace">PIVOT TABLE</text>
+          <text x="213" y="38" text-anchor="middle" fill="#888" font-size="9" font-family="monospace">book_author</text>
+          <line x1="278" y1="28" x2="306" y2="28" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="303,25 309,28 303,31" fill="#ff4d8d"/>
+          <rect x="310" y="8" width="148" height="40" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="384" y="24" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">ENTITY</text>
+          <text x="384" y="38" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">authors</text>
+          <line x1="102" y1="82" x2="144" y2="82" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="141,79 147,82 141,85" fill="#ff4d8d"/>
+          <rect x="148" y="62" width="130" height="40" rx="2" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+          <text x="213" y="78" text-anchor="middle" fill="#666" font-size="8" font-family="monospace">PIVOT TABLE</text>
+          <text x="213" y="92" text-anchor="middle" fill="#888" font-size="9" font-family="monospace">book_category</text>
+          <line x1="278" y1="82" x2="306" y2="82" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="303,79 309,82 303,85" fill="#ff4d8d"/>
+          <rect x="310" y="62" width="148" height="40" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="384" y="78" text-anchor="middle" fill="#33aa66" font-size="8" font-family="monospace">ENTITY</text>
+          <text x="384" y="92" text-anchor="middle" fill="#4dcc88" font-size="9" font-weight="600" font-family="monospace">categories</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ decisions ]</span>
+      <p class="proj-row-text">used laravel pivot tables to handle many-to-many relationships cleanly — a book can have multiple authors and categories without duplicating data. built a reporting dashboard so admins can see the state of the database without running manual queries. protected all routes behind authentication.</p>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ impact ]</span>
+      <p class="proj-row-text">tackles a more complex relational database scenario than a simple one-to-many — many-to-many relationships with pivot tables are a common real-world requirement. demonstrates auth-protected routes, dashboard reporting, and multi-entity crud in one system.</p>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ highlights ]</span>
+    <div class="proj-ach-band">
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="6" data-dur="700">6</p>
+        <p class="proj-ach-desc">database tables including 2 pivot tables</p>
+        <div style="display:flex;gap:3px;margin-top:10px;justify-content:center;flex-wrap:wrap">
+          <div style="width:18px;height:14px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:18px;height:14px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:18px;height:14px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:18px;height:14px;border:1px solid #2a2a2a;border-radius:1px;background:#111"></div>
+          <div style="width:18px;height:14px;border:1px solid #ff4d8d55;border-radius:1px;background:#160808"></div>
+          <div style="width:18px;height:14px;border:1px solid #ff4d8d55;border-radius:1px;background:#160808"></div>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="2" data-dur="500">2</p>
+        <p class="proj-ach-desc">many-to-many relationships managed via Eloquent</p>
+        <div style="display:flex;gap:6px;margin-top:10px;justify-content:center">
+          <span style="font-size:8px;padding:2px 6px;border:1px solid #224433;border-radius:2px;color:#4dcc88;font-family:monospace;background:#080f0a">book ↔ author</span>
+          <span style="font-size:8px;padding:2px 6px;border:1px solid #224433;border-radius:2px;color:#4dcc88;font-family:monospace;background:#080f0a">book ↔ category</span>
+        </div>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num">0</p>
+        <p class="proj-ach-desc">unprotected routes — nothing accessible without authentication</p>
+        <div style="margin-top:10px;text-align:center">
+          <span style="font-size:16px">🔒</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ screens ]</span>
+    <div class="proj-screens-grid">
+      <div class="proj-screen-cell"><img src="projects/bookstore/pic1.png" alt="dashboard" loading="lazy" /><span class="proj-screen-lbl">dashboard</span></div>
+      <div class="proj-screen-cell"><img src="projects/bookstore/pic2.png" alt="book management" loading="lazy" /><span class="proj-screen-lbl">book management</span></div>
+      <div class="proj-screen-cell"><img src="projects/bookstore/pic3.png" alt="author management" loading="lazy" /><span class="proj-screen-lbl">author management</span></div>
+      <div class="proj-screen-cell"><img src="projects/bookstore/pic4.png" alt="category management" loading="lazy" /><span class="proj-screen-lbl">category management</span></div>
+    </div>
+  </div>
+
+  <!-- MORE PROJECTS -->
+  <div class="proj-section">
+    <a class="proj-section-label" href="index.html#work">[ more projects ]</a>
+    <div class="proj-more-grid">
+      <a class="proj-more-card" href="guardian-malaysia.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Guardian Malaysia Search QA Pipeline</span>
+          <span class="proj-more-type">node.js · puppeteer · openai api</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="airport-luggage.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Airport Luggage Management System</span>
+          <span class="proj-more-type">c++ · stack · queue · vector</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="music-festival.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Music Festival Web System</span>
+          <span class="proj-more-type">php · mysql · bootstrap · tailwind</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="reminder.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">REMinder Mobile Application</span>
+          <span class="proj-more-type">.net maui · sqlite · firebase</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="proj-back" href="index.html#work">← back to project list</a>
+
+</div>
+<script src="lightbox.js"></script>
+<script>
+(function () {
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  document.querySelectorAll('.proj-ach-num[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    const dur    = +(el.dataset.dur || 1200);
+    const fmt    = el.dataset.fmt || '';
+    let started  = false;
+    new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting || started) return;
+      started = true;
+      const t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const v = Math.round(ease(p) * target);
+        el.textContent = fmt === 'k' ? v + 'k' : fmt === '%' ? v + '%' : fmt === 'kg' ? v + 'kg' : v;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.5 }).observe(el);
+  });
+})();
+</script>
+</body>
+</html>

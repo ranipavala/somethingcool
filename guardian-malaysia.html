@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>guardian malaysia — rani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="proj-page">
+
+<nav class="proj-nav">
+  <a class="proj-nav-back" href="index.html#work">← [ back to work ]</a>
+  <a class="proj-nav-logo" href="index.html">[ rani ]</a>
+</nav>
+
+<div class="proj-body">
+
+  <!-- METADATA -->
+  <div class="proj-meta-grid">
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ type ]</span>
+      <div>
+        <span class="tag tag-pink">individual</span>
+        <span class="tag tag-pink">internship</span>
+      </div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ platform ]</span>
+      <div><span class="tag">automation tool</span></div>
+    </div>
+    <div class="proj-meta-cell">
+      <span class="proj-meta-label">[ timeline ]</span>
+      <span style="font-size:12px;color:#ccc;">may — aug 2025</span>
+    </div>
+  </div>
+  <div class="proj-meta-stack">
+    <span class="proj-meta-label">[ stack ]</span>
+    <div>
+      <span class="tag">node.js</span>
+      <span class="tag">puppeteer</span>
+      <span class="tag">openai api</span>
+      <span class="tag">fuse.js</span>
+      <span class="tag">sheetjs</span>
+    </div>
+  </div>
+
+  <hr class="proj-divider" />
+
+  <!-- HEADLINE -->
+  <span class="proj-company-label">[ guardian malaysia ]</span>
+  <p class="proj-headline-single">965k searches returning the wrong thing. built the pipeline that found out why.</p>
+
+  <!-- CONTENT ROWS -->
+  <div class="proj-content-rows">
+    <div class="proj-row">
+      <span class="proj-row-label">[ problem ]</span>
+      <p class="proj-row-text">guardian's e-commerce search had no systematic way to know when a search term was failing across a 965k dataset. manual review wasn't scalable — there was no visibility into bad queries, malformed inputs, or injection attempts at that volume.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 580 84" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="11" width="136" height="62" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="70" y="32" text-anchor="middle" fill="#ff4d8d" font-size="12" font-weight="700" font-family="monospace">965k</text>
+          <text x="70" y="47" text-anchor="middle" fill="#888" font-size="9" font-family="monospace">search terms</text>
+          <text x="70" y="62" text-anchor="middle" fill="#444" font-size="8" font-family="monospace">no visibility</text>
+          <line x1="138" y1="42" x2="174" y2="42" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="171,39 177,42 171,45" fill="#ff4d8d"/>
+          <rect x="177" y="11" width="80" height="62" rx="2" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+          <text x="217" y="52" text-anchor="middle" fill="#2e2e2e" font-size="28" font-weight="700" font-family="monospace">?</text>
+          <line x1="257" y1="42" x2="293" y2="42" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="290,39 296,42 290,45" fill="#ff4d8d"/>
+          <rect x="296" y="11" width="282" height="62" rx="2" fill="#160808" stroke="#662222" stroke-width="0.5"/>
+          <text x="437" y="32" text-anchor="middle" fill="#cc4444" font-size="10" font-weight="700" font-family="monospace">wrong results / no results</text>
+          <text x="437" y="48" text-anchor="middle" fill="#883333" font-size="9" font-family="monospace">returned silently</text>
+          <text x="437" y="63" text-anchor="middle" fill="#553333" font-size="8" font-family="monospace">no visibility at 965k scale</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ solution ]</span>
+      <p class="proj-row-text">a layered classification pipeline — rule engine first to handle obvious cases cheaply, ai fallback via gpt-4.1-mini for anything ambiguous. outputs to excel with cause label and confidence score per term, making the results immediately actionable.</p>
+      <div style="overflow-x:auto;margin:20px 0 6px">
+        <svg viewBox="0 0 600 108" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect x="2" y="8" width="106" height="40" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="55" y="24" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">INPUT</text>
+          <text x="55" y="39" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">search term</text>
+          <line x1="108" y1="28" x2="136" y2="28" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="133,25 139,28 133,31" fill="#ff4d8d"/>
+          <rect x="140" y="8" width="100" height="40" rx="2" fill="#0d0d0d" stroke="#1e1e1e" stroke-width="0.5"/>
+          <text x="190" y="24" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">CLASSIFY</text>
+          <text x="190" y="39" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">rule engine</text>
+          <line x1="240" y1="28" x2="447" y2="28" stroke="#224433" stroke-width="1" stroke-dasharray="5,3"/>
+          <polygon points="444,25 450,28 444,31" fill="#224433"/>
+          <text x="340" y="21" text-anchor="middle" fill="#336644" font-size="8" font-family="monospace">classified → fast path</text>
+          <line x1="190" y1="48" x2="190" y2="60" stroke="#444" stroke-width="1"/>
+          <polygon points="187,57 190,63 193,57" fill="#444"/>
+          <text x="210" y="57" fill="#444" font-size="7" font-family="monospace">ambiguous</text>
+          <rect x="140" y="64" width="110" height="36" rx="2" fill="#0d0d0d" stroke="#1a1a1a" stroke-width="0.5"/>
+          <text x="195" y="79" text-anchor="middle" fill="#555" font-size="8" font-family="monospace">AI FALLBACK</text>
+          <text x="195" y="93" text-anchor="middle" fill="#bbb" font-size="9" font-weight="600" font-family="monospace">gpt-4.1-mini</text>
+          <line x1="250" y1="82" x2="447" y2="82" stroke="#ff4d8d" stroke-width="1.5"/>
+          <polygon points="444,79 450,82 444,85" fill="#ff4d8d"/>
+          <rect x="452" y="8" width="146" height="92" rx="2" fill="#080f0a" stroke="#224433" stroke-width="0.5"/>
+          <text x="525" y="32" text-anchor="middle" fill="#33aa66" font-size="9" font-family="monospace">OUTPUT</text>
+          <text x="525" y="51" text-anchor="middle" fill="#4dcc88" font-size="10" font-weight="700" font-family="monospace">excel report</text>
+          <text x="525" y="67" text-anchor="middle" fill="#336644" font-size="8" font-family="monospace">cause label</text>
+          <text x="525" y="82" text-anchor="middle" fill="#336644" font-size="8" font-family="monospace">confidence score</text>
+        </svg>
+      </div>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ decisions ]</span>
+      <p class="proj-row-text">rule logic handles obvious cases to cut api cost. gpt-4.1-mini is only called when the engine can't classify confidently — this kept costs predictable and the pipeline fast. fuse.js handles fuzzy matching for near-miss terms before escalating to ai.</p>
+    </div>
+    <div class="proj-row">
+      <span class="proj-row-label">[ impact ]</span>
+      <p class="proj-row-text">manual review cut to near zero. 203 sql injection attempts surfaced as a byproduct of building the classifier — a result that wasn't the original brief but became a key deliverable. the pipeline now runs end-to-end without human intervention.</p>
+    </div>
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ highlights ]</span>
+    <div class="proj-ach-band">
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="965" data-dur="1500" data-fmt="k">965k</p>
+        <p class="proj-ach-desc">search terms classified</p>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num" data-count="203" data-dur="1200">203</p>
+        <p class="proj-ach-desc">SQL injection terms identified</p>
+      </div>
+      <div class="proj-ach-cell">
+        <p class="proj-ach-num">5</p>
+        <p class="proj-ach-desc">classification categories — fully automated</p>
+        <div style="display:flex;gap:6px;margin-top:10px;justify-content:center">
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.9"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.9"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.9"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.9"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:#ff4d8d;opacity:0.9"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREENS -->
+  <div class="proj-section">
+    <span class="proj-section-label">[ screens ]</span>
+    <div class="proj-screens-grid">
+      <div class="proj-screen-cell">[ excel output ]</div>
+      <div class="proj-screen-cell">[ pipeline log ]</div>
+      <div class="proj-screen-cell">[ classification sample ]</div>
+      <div class="proj-screen-cell">[ pipeline overview ]</div>
+    </div>
+  </div>
+
+  <!-- MORE PROJECTS -->
+  <div class="proj-section">
+    <a class="proj-section-label" href="index.html#work">[ more projects ]</a>
+    <div class="proj-more-grid">
+      <a class="proj-more-card" href="emoshield.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">EmoShield</span>
+          <span class="proj-more-type">flutter · tensorflow lite · mediapipe · firebase</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="airport-luggage.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Airport Luggage Management System</span>
+          <span class="proj-more-type">c++ · stack · queue · vector</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="bookstore.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Online Bookstore Management System</span>
+          <span class="proj-more-type">laravel · mysql · eloquent · pivot tables</span>
+        </div>
+      </a>
+      <a class="proj-more-card" href="music-festival.html">
+        <div class="proj-more-thumb"><span class="proj-more-peek">● peek</span></div>
+        <div class="proj-more-info">
+          <span class="proj-more-name">Music Festival Web System</span>
+          <span class="proj-more-type">php · mysql · bootstrap · tailwind</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="proj-back" href="index.html#work">← back to project list</a>
+
+</div>
+<script>
+(function () {
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  document.querySelectorAll('.proj-ach-num[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    const dur    = +(el.dataset.dur || 1200);
+    const fmt    = el.dataset.fmt || '';
+    let started  = false;
+    new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting || started) return;
+      started = true;
+      const t0 = performance.now();
+      const tick = now => {
+        const p = Math.min((now - t0) / dur, 1);
+        const v = Math.round(ease(p) * target);
+        el.textContent = fmt === 'k' ? v + 'k' : v;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.5 }).observe(el);
+  });
+})();
+</script>
+<script src="lightbox.js"></script>
+</body>
+</html>
