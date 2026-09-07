@@ -1021,11 +1021,11 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
   .contact-links { flex-direction: column; gap: 8px; }
   .contact-link-div { display: none; }
 
-  /* Education — vertical single-column timeline */
+  /* Education — clean vertical timeline */
   .edu-nodes {
     display: flex !important;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
     position: relative;
     padding-left: 0 !important;
   }
@@ -1039,22 +1039,34 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
     background: #2a2a2a;
     z-index: 0;
   }
-  .edu-node {
+  .edu-node,
+  .edu-node.node-above,
+  .edu-node.node-below {
     display: block !important;
-    position: relative;
-    padding-left: 22px;
+    position: relative !important;
+    padding: 0 0 0 18px !important;
     height: auto !important;
+    min-height: 0 !important;
   }
-  .edu-dot {
+  .edu-dot,
+  .edu-node.node-above .edu-dot,
+  .edu-node.node-below .edu-dot {
     position: absolute !important;
-    left: -1px !important;
-    top: 2px !important;
+    left: 0 !important;
+    top: 3px !important;
     margin: 0 !important;
     opacity: 1 !important;
     z-index: 1;
   }
   .edu-conn,
-  .edu-pad { display: none !important; }
+  .edu-pad,
+  .edu-node.node-above .edu-conn,
+  .edu-node.node-above .edu-pad,
+  .edu-node.node-below .edu-conn,
+  .edu-node.node-below .edu-pad {
+    display: none !important;
+    height: 0 !important;
+  }
   .edu-top-content,
   .edu-node.node-above .edu-top-content,
   .edu-node.node-below .edu-top-content {
@@ -1063,13 +1075,19 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
     min-height: 0 !important;
     transform: none !important;
     opacity: 1 !important;
-    max-width: 100% !important;
     padding: 0 !important;
+    margin: 0 !important;
     text-align: left !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
+    max-width: 100% !important;
   }
-  .edu-school { max-width: 100% !important; }
+  .edu-level,
+  .edu-school,
+  .edu-year,
+  .edu-cgpa,
+  .edu-cgpa-label {
+    text-align: left !important;
+    max-width: 100% !important;
+  }
   .edu-timeline.is-visible .edu-node:hover .edu-top-content { transform: none !important; }
 }
 

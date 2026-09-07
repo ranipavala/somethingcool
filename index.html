@@ -647,6 +647,17 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  /* ── INTERNAL HASH LINKS (fixes iOS scroll-snap swallowing href="#x") ── */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    if (link.classList.contains('nav-logo')) return;
+    link.addEventListener('click', e => {
+      const id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
   /* ── CURSOR GLOW ── */
   const glow = document.getElementById('cursor-glow');
   document.addEventListener('mousemove', e => {
