@@ -1020,49 +1020,50 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
   .contact-links { flex-direction: column; gap: 8px; }
   .contact-link-div { display: none; }
 
-  /* Education — vertical timeline */
+  /* Education — vertical single-column timeline */
   .edu-nodes {
     display: flex !important;
     flex-direction: column;
-    gap: 0;
+    gap: 20px;
     position: relative;
-    padding-left: 28px;
-    grid-template-columns: unset;
+    padding-left: 0 !important;
   }
   .edu-nodes::before {
     content: '';
     position: absolute;
-    left: 7px;
-    top: 14px;
-    bottom: 14px;
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
     width: 1px;
-    background: #222;
+    background: #2a2a2a;
+    z-index: 0;
   }
   .edu-node {
+    display: block !important;
     position: relative;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding-bottom: 28px;
+    padding-left: 22px;
+    height: auto !important;
   }
   .edu-dot {
     position: absolute !important;
-    left: -25px;
-    top: 0;
+    left: -1px !important;
+    top: 2px !important;
     margin: 0 !important;
     opacity: 1 !important;
+    z-index: 1;
   }
+  .edu-conn,
+  .edu-pad { display: none !important; }
   .edu-top-content {
-    padding-left: 0 !important;
-    max-width: 100% !important;
-  }
-  .edu-node.node-above .edu-top-content,
-  .edu-node.node-below .edu-top-content {
+    display: block !important;
     height: auto !important;
     transform: none !important;
     opacity: 1 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
   }
-  .edu-school { max-width: 100%; }
-  .edu-timeline.is-visible .edu-node:hover .edu-top-content { transform: none; }
+  .edu-school { max-width: 100% !important; }
+  .edu-timeline.is-visible .edu-node:hover .edu-top-content { transform: none !important; }
 }
 
 /* ─── PROJECT PAGE SHARED ───────────────────────────── */

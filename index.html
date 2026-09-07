@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>if (history.scrollRestoration) history.scrollRestoration = 'manual';</script>
 </head>
 <body>
 
@@ -637,8 +638,7 @@
 <script>
 (() => {
   /* ── SCROLL TO TOP ON LOAD ── */
-  if (history.scrollRestoration) history.scrollRestoration = 'manual';
-  window.scrollTo(0, 0);
+  window.addEventListener('pageshow', () => window.scrollTo(0, 0));
 
   /* ── LOGO → HERO ── */
   const navLogo = document.querySelector('.nav-logo');
@@ -889,13 +889,18 @@
   prevBtn.addEventListener('click', () => navigate(-1));
   nextBtn.addEventListener('click', () => navigate(1));
 
-  /* touch swipe */
+  /* touch swipe — document-level so scroll-snap doesn't steal the gesture */
   let touchStartX = 0;
-  const sqTrackWrap = track.parentElement;
-  sqTrackWrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  sqTrackWrap.addEventListener('touchend', e => {
+  let touchStartY = 0;
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', e => {
+    if (!sqVisible) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 40) navigate(dx < 0 ? 1 : -1);
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) navigate(dx < 0 ? 1 : -1);
   }, { passive: true });
 
   let sqVisible = false;
