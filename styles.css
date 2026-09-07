@@ -1015,6 +1015,7 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
   .nav { padding: 0 5vw; }
   .nav-links a { padding: 0 10px; font-size: 10px; }
   .hero { padding: 60px 5vw; }
+  .education { padding-top: 64px; }
   .skills-cols { grid-template-columns: 1fr; }
   .hero-sub-row { flex-direction: column; gap: 12px; }
   .contact-links { flex-direction: column; gap: 8px; }
@@ -1054,13 +1055,19 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
   }
   .edu-conn,
   .edu-pad { display: none !important; }
-  .edu-top-content {
+  .edu-top-content,
+  .edu-node.node-above .edu-top-content,
+  .edu-node.node-below .edu-top-content {
     display: block !important;
     height: auto !important;
+    min-height: 0 !important;
     transform: none !important;
     opacity: 1 !important;
     max-width: 100% !important;
     padding: 0 !important;
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
   }
   .edu-school { max-width: 100% !important; }
   .edu-timeline.is-visible .edu-node:hover .edu-top-content { transform: none !important; }
