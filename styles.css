@@ -1021,7 +1021,7 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
   .contact-links { flex-direction: column; gap: 8px; }
   .contact-link-div { display: none; }
 
-  /* Education — clean vertical timeline */
+  /* Education — animated vertical timeline (mirrors desktop scaleX → scaleY) */
   .edu-nodes {
     display: flex !important;
     flex-direction: column;
@@ -1029,16 +1029,22 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
     position: relative;
     padding-left: 0 !important;
   }
+  /* Vertical line draws top→bottom when is-visible, like desktop draws left→right */
   .edu-nodes::before {
     content: '';
     position: absolute;
     left: 4px;
-    top: 8px;
-    bottom: 8px;
+    top: 0;
+    bottom: 0;
     width: 1px;
-    background: #2a2a2a;
+    background: linear-gradient(to bottom, #2a2a2a 60%, rgba(255,77,141,0.5));
+    transform-origin: top center;
+    transform: scaleY(0);
+    transition: transform 1.2s ease-in-out;
     z-index: 0;
   }
+  .edu-timeline.is-visible .edu-nodes::before { transform: scaleY(1); }
+  /* Each node: block, left-rail space for dot */
   .edu-node,
   .edu-node.node-above,
   .edu-node.node-below {
@@ -1048,16 +1054,16 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
     height: auto !important;
     min-height: 0 !important;
   }
-  .edu-dot,
-  .edu-node.node-above .edu-dot,
-  .edu-node.node-below .edu-dot {
+  /* Dot: absolute, starts invisible, fades in via existing base is-visible rule */
+  .edu-dot {
     position: absolute !important;
     left: 0 !important;
     top: 3px !important;
     margin: 0 !important;
-    opacity: 1 !important;
+    opacity: 0; /* reset 900px's opacity:1 so animation plays */
     z-index: 1;
   }
+  /* Spacers hidden */
   .edu-conn,
   .edu-pad,
   .edu-node.node-above .edu-conn,
@@ -1067,24 +1073,29 @@ section { padding: 88px 8vw; scroll-snap-align: start; scroll-snap-stop: always;
     display: none !important;
     height: 0 !important;
   }
-  .edu-top-content,
+  /* Content: block, fade-in only (no slide — wrong axis on vertical layout) */
   .edu-node.node-above .edu-top-content,
   .edu-node.node-below .edu-top-content {
     display: block !important;
     height: auto !important;
     min-height: 0 !important;
     transform: none !important;
-    opacity: 1 !important;
+    opacity: 0; /* reset 900px's opacity:1 */
+    transition: opacity 0.5s ease !important;
+    transition-delay: var(--node-delay, 0ms) !important;
     padding: 0 !important;
     margin: 0 !important;
     text-align: left !important;
     max-width: 100% !important;
   }
-  .edu-level,
-  .edu-school,
-  .edu-year,
-  .edu-cgpa,
-  .edu-cgpa-label {
+  /* Reveal content when is-visible (higher specificity wins over reset above) */
+  .edu-timeline.is-visible .edu-node.node-above .edu-top-content,
+  .edu-timeline.is-visible .edu-node.node-below .edu-top-content {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  /* All text elements explicitly left-aligned */
+  .edu-level, .edu-school, .edu-year, .edu-cgpa, .edu-cgpa-label {
     text-align: left !important;
     max-width: 100% !important;
   }
